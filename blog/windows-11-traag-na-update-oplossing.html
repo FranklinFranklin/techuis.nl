@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--* favicon -->
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico" type="image/x-icon" />
+  <!--! css link -->
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- tailwind compiled css -->
+  <link rel="stylesheet" href="../assets/css/tailwind.min.css" />
+  <!-- flaticon.com -->
+
+  <title>Windows 11 traag na update? Zo los je het op | Techuis ICT</title>
+
+  <meta name="description" content="Windows 11-tips en IT-gidsen van Techuis ICT: prestaties, beveiliging, back-up en productiviteit. Geüpdatet voor 2025."/>
+  <link rel="canonical" href="https://techuis.nl/blog/windows-11-traag-na-update-oplossing.html" />
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Techuis ICT – Windows 11-tips & gidsen (2025)"/>
+  <meta property="og:description" content="Windows 11-tips en IT-gidsen van Techuis ICT: prestaties, beveiliging, back-up en productiviteit. Geüpdatet voor 2025."/>
+  <meta property="og:image" content="./assets/images/og/windows11-tips.png"/>
+  <meta property="og:url" content="./media.html"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Techuis ICT – Windows 11-tips & gidsen (2025)"/>
+  <meta name="twitter:description" content="Windows 11-tips en IT-gidsen van Techuis ICT: prestaties, beveiliging, back-up en productiviteit. Geüpdatet voor 2025."/>
+  <meta name="twitter:image" content="./assets/images/og/windows11-tips.png"/>
+
+  <meta name="description" content="Windows 11 traag na update? Volg veilige stappen: herstart, opslag opschonen, opstartapps beperken, drivers controleren en updates verifiëren."/>
+  <meta name="keywords" content="windows 11 traag na update, pc langzaam, windows update problemen, opstartapps, drivers"/>
+  <link rel="canonical" href="./windows-11-traag-na-update-oplossing.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="Windows 11 traag na update? Zo los je het op"/>
+  <meta property="og:description" content="Windows 11 traag na update? Volg veilige stappen: herstart, opslag opschonen, opstartapps beperken, drivers controleren en updates verifiëren."/>
+  <meta property="og:image" content="./assets/images/og/windows11-tips.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <!-- BlogPosting Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Windows 11 traag na update? Zo los je het op",
+      "description": "Windows 11-tips en IT-gidsen van Techuis ICT: prestaties, beveiliging, back-up en productiviteit. Geüpdatet voor 2025.",
+      "url": "../media.html",
+      "image": "https://techuis.nl/assets/images/logo/og-image.jpg",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Techuis ICT",
+        "url": "https://techuis.nl/"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Techuis ICT"
+      }
+    }
+  </script>
+
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:site_name" content="Techuis ICT" />
+</head>
+
+<body>
+  <header class="header w-full">
+    <!-- Cookies and Cache start -->
+    <!-- Cookie Consent Banner Start -->
+    <!-- ====== Cookies Section Start -->
+    <section id="cookieConsent"
+      class="fixed rounded md:rounded-lg bottom-10 left-1/2 -translate-x-1/2 w-1/2 bg-white z-50 shadow-lg transition-all duration-300"
+      style="display: none;">
+      <div class="max-w-ml mx-auto px-3 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <span class="text-sm text-gray-800 flex-1">
+          Deze website gebruikt cookies voor de beste ervaring.
+          <a href="../privacybeleid.html" class="text-indigo-600 underline hover:text-indigo-800 ml-1">Meer info</a>
+        </span>
+        <div class="flex gap-1 mt-2 sm:mt-0">
+          <button type="button" id="acceptCookies"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs px-3 py-1 rounded transition">Accepteren</button>
+          <button type="button" id="declineCookies"
+            class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded border transition">Weigeren</button>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Cookies Section End -->
+    <script>
+      // Simple cookie consent logic
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        if (!getCookie("cookieConsent")) {
+          document.getElementById("cookieConsent").style.display = "flex";
+        }
+        document.getElementById("acceptCookies").onclick = function () {
+          setCookie("cookieConsent", "accepted", 365);
+          document.getElementById("cookieConsent").style.display = "none";
+        };
+        document.getElementById("declineCookies").onclick = function () {
+          setCookie("cookieConsent", "declined", 365);
+          document.getElementById("cookieConsent").style.display = "none";
+        };
+      });
+    </script>
+    <!-- Cookie Consent Banner End -->
+    <!-- Cookies and Cache end -->
+    <!--! topHeader -->
+    <!--  -->
+    <div class="top-header w-screen flex flex-col items-center justify-between">
+      <!-- <div class="top-header w-screen flex flex-col items-center justify-between border-b"> -->
+      <div class="flex w-full items-center justify-between p-4 md:px-20 border-b">
+        <div class="icons hidden lg:flex items-center gap-2">
+          <a class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-indigo-600 flex items-center justify-center transition-all"
+            href="#" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-indigo-600 flex items-center justify-center transition-all"
+            href="#" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-indigo-600 flex items-center justify-center transition-all"
+            href="#" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon>
+          </a>
+        </div>
+        <h3 class="text-gray-400 font-semibold text-xs">
+          <!-- // ICT hulp -->
+          <span class="text-black-400">Bel ons</span> voor een gratis gesprek <span class="text-black-400"> via </span>
+          <a href="tel:+31686427359" data-event="call-click"><ion-icon name="call-outline"></ion-icon> 06 - 86 42 73 59 </a>
+          <span> | Wij zijn ook via WhatsApp te bereiken! </span> <a href="https://wa.me/31686427359" data-event="whatsapp-click"><ion-icon
+              name="logo-whatsapp"></ion-icon> 06 - 86 42 73 59 </a>
+        </h3>
+        <div class="select hidden">
+          <select class="mr-2 p-1 px-2 text-sm font-semibold" id="language">
+            <option value="Nederlands">Nederlands</option>
+            <option value="Engels">Engels</option>
+            <option value="Portugees">Portugees</option>
+            <option value="Spaans">Spaans</option>
+          </select>
+        </div>
+      </div>
+      <div class="flex w-full items-center justify-between p-4 sm:p-6 md:px-24">
+        <div>
+          <a href="../index.html" class="block">
+            <span class="font-semibold text-xl text-gray-800 block">Techuis ICT</span>
+            <span class="block text-[10px] text-gray-500 font-medium">Deskundig en efficiënt, gewoon bij u thuis!</span>
+          </a>
+        </div>
+        <!-- Mobile Menu Toggle (lg:hidden) -->
+        <button id="openNavbarButton" type="button" aria-label="Open menu"
+          class="lg:hidden p-2 rounded-xl border border-gray-200 text-gray-700 hover:text-indigo-600 hover:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors flex items-center justify-center text-2xl">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+        <!--todo desktop Navbar -->
+        <div class="desktopNavbar">
+          <nav class="my-4 hidden lg:flex justify-center">
+            <ul class="desktopNavbarUl flex justify-center items-center gap-12 font-sm font-bold text-gray-600">
+                <li class="nav_items relative category_nav_item">
+                  <a href="#Categories">Diensten</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all ease-in-out"></span>
+                  <!--? hoverItems -->
+                  <ul
+                    class="categoriesItem hidden absolute top-10 shadow-lg rounded-xl grid-cols-4 p-4 gap-4 border-2 border-double text-gray-400 font-normal bg-white z-10">
+
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Telefoon - Mobiel - APP
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li>
+                          <a href="../telefoon-mobile-apps.html"> Vaste Telefoon </a>
+                        </li>
+                        <li>
+                          <a href="../telefoon-mobile-apps.html"> Mobiel </a>
+                        </li>
+                        <li>
+                          <a href="../telefoon-mobile-apps.html"> App </a>
+                        </li>
+                        <li>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Computer - Laptop
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li>
+                          <a href="../computer-laptop.html"> Computer </a>
+                        </li>
+                        <li>
+                          <a href="../computer-laptop.html"> Laptop </a>
+                        </li>
+                        <li>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Tablet - IPAD
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li>
+                          <a href="../tablet-ipad.html"> Tablet </a>
+                        </li>
+                        <li>
+                          <a href="../tablet-ipad.html"> Apple IPAD </a>
+                        </li>
+                        <!-- <li><img src="../assets/images/mens-banner.jpg" alt="Techuis ICT Computerhulp aan Huis" / loading="lazy"></li> -->
+                      </ul>
+                    </li>
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Internet - Email
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li>
+                          <a href="../internet-email-thuisnetwerk-wifi.html"> Internet </a>
+
+                        </li>
+                        <li>
+                          <a href="../internet-email-thuisnetwerk-wifi.html"> Email </a>
+                        </li>
+                        <li>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Printer - Scanner
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li>
+                          <a href="../printer-scanner.html"> Printer </a>
+                        </li>
+                        <li>
+                          <a href="../printer-scanner.html"> Scanner </a>
+                        </li>
+                        <li>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Website - Webshop - Webdesign
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li>
+                          <a href="../websitebouwen.html"> Website </a>
+                        </li>
+                        <li>
+                          <a href="../websitebouwen.html"> Webshop </a>
+                        </li>
+                        <li>
+                          <a href="../websitebouwen.html"> Webdesign </a>
+                        </li>
+                        <li>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Huishoud Apparaten
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li>
+                          <a href="../huishoudapparaten.html"> Smart TV </a>
+                        </li>
+                        <li>
+                          <a href="../huishoudapparaten.html"> Smart Wasmachine </a>
+                        </li>
+                        <li>
+                          <a href="../huishoudapparaten.html"> Smart Deurbel </a>
+                        </li>
+                        <li>
+                        </li>
+                      </ul>
+                  </ul>
+                  <!--? hoverItems -->
+                </li>
+                <li class="nav_items relative nav_item_tarieven">
+                  <a href="../tarieven.html">Tarieven</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all ease-in-out"></span>
+                  <!--? hoverItems -->
+                </li>
+                <li class="nav_items relative wonav_item_tarieven">
+                  <a href="../werkwijze.html">Werkwijze</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all ease-in-out"></span>
+                  <!--? hoverItems -->
+                </li>
+                <li class="nav_items relative nav_item_contact">
+                  <a href="../contact.html">Contact</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all ease-in-out"></span>
+                  <!--? hoverItems -->
+                </li>
+                <li class="nav_items relative nav_item_overons">
+                  <a href="../overons.html">Over ons</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all ease-in-out"></span>
+                  <!--? hoverItems -->
+                </li>
+                <li class="nav_items relative">
+                  <a href="../media.html">Media</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all ease-in-out"></span>
+                  <!--? hoverItems -->
+                </li>
+              </ul>
+            </nav>
+        </div>
+        <div class="desktopNavbar">
+          <ul class=" flex justify-center items-center gap-12 font-sm font-bold text-gray-600">
+            <li>
+              <a href="tel:+31686427359" data-event="call-click" class="inline-flex items-center gap-2 rounded-md bg-indigo-600 shadow-lg shadow-indigo-500/50 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 transition-all"><ion-icon name="call-outline"></ion-icon> Maak een afspraak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--? mobile Navbar start -->
+    <div class="mobileNavbar">
+      <!--? navbar button -->
+      
+      <!--* overlay -->
+      <div id="overlayNavbar" class="hidden fixed top-0 left-0 w-screen h-screen bg-gray-500/30 z-10"></div>
+
+      <!--! sidebarNavbar -->
+      <div
+        class="fixed top-0 w-80 h-screen bg-white p-4 shadow-lg hidden flex-col justify-start gap-4 text-lg font-semibold overflow-auto z-20"
+        id="sidebarNavbar">
+        <div class="flex justify-between border-b-2 py-4">
+          <h3 class="text-gray-900 font-bold">Menu</h3>
+          <button type="button" class="closeButton hover:text-indigo-600">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </button>
+        </div>
+        <a href="../index.html"
+          class="flex font-bold flex items-center gap-2 mb-2 text-gray-700 hover:text-indigo-600 transition-colors">
+          <ion-icon name="home-outline" class="text-2xl"></ion-icon>
+          Home
+        </a>
+        <!-- Navigator -->
+        <ul id="mobileNavbarUl">
+          <li class="nav_items relative nav_item_tarieven flex items-center gap-2 mb-2 group"
+            style="cursor:pointer;padding:0;">
+            <a href="../tarieven.html"
+              class="flex items-center gap-2 w-full h-full text-gray-700 font-semibold underline-offset-4"
+              style="width:100%;height:100%;">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100">
+                <ion-icon name="pricetags-outline" class="text-sm text-indigo-600"></ion-icon>
+              </span>
+              Tarieven
+            </a>
+          </li>
+          <li class="nav_items relative wonav_item_tarieven flex items-center gap-2 mb-2 group"
+            style="cursor:pointer;padding:0;">
+            <a href="../werkwijze.html"
+              class="flex items-center gap-2 w-full h-full text-gray-700 font-semibold underline-offset-4"
+              style="width:100%;height:100%;">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-green-100">
+                <ion-icon name="construct-outline" class="text-lg text-green-600"></ion-icon>
+              </span>
+              Werkwijze
+            </a>
+          </li>
+          <li class="nav_items relative nav_item_contact flex items-center gap-2 mb-2 group"
+            style="cursor:pointer;padding:0;">
+            <a href="../contact.html"
+              class="flex items-center gap-2 w-full h-full text-gray-700 font-semibold underline-offset-4"
+              style="width:100%;height:100%;">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100">
+                <ion-icon name="mail-outline" class="text-lg text-yellow-600"></ion-icon>
+              </span>
+              Contact
+            </a>
+          </li>
+          <li class="nav_items relative nav_item_overons flex items-center gap-2 group"
+            style="cursor:pointer;padding:0;">
+            <a href="../overons.html"
+              class="flex items-center gap-2 w-full h-full text-gray-700 font-semibold underline-offset-4"
+              style="width:100%;height:100%;">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-pink-100">
+                <ion-icon name="people-outline" class="text-lg text-pink-600"></ion-icon>
+              </span>
+              Over ons
+            </a>
+          </li>
+        </ul>
+        <div class="border-b"></div>
+        <!-- Diensten dropdown -->
+        <div class="relative mb-4">
+          <button type="button" id="dienstenDropdownBtn"
+            class="w-full flex justify-between items-center pb-3 text-gray-600 font-bold focus:outline-none">
+            <span>
+              <div class="font-bold flex items-center gap-2 mb-2">
+                <span
+                  class="inline-flex items-center justify-center gap-2 text-gray-700 hover:text-indigo-600 transition-colors">
+                  <ion-icon name="apps-outline" class="text-xl"></ion-icon>
+                </span>
+                <h3>Diensten</h3>
+              </div>
+            </span>
+            <svg id="dienstenDropdownIcon" class="w-4 h-4 ml-2 transition-transform duration-200" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="dienstenDropdownMenu" class="hidden flex-col gap-1 mt-2">
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100">
+                <ion-icon name="phone-portrait-outline" class="text-indigo-600 text-lg"></ion-icon>
+              </span>
+              <a href="../telefoon-mobile-apps.html">Telefoon - Mobiel - APP</a>
+            </div>
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100">
+                <ion-icon name="laptop-outline" class="text-blue-600 text-lg"></ion-icon>
+              </span>
+              <a href="../computer-laptop.html">Computer - Laptop</a>
+            </div>
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-pink-100">
+                <ion-icon name="tablet-portrait-outline" class="text-pink-600 text-lg"></ion-icon>
+              </span>
+              <a href="../tablet-ipad.html">Tablet - Apple IPAD</a>
+            </div>
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-green-100">
+                <ion-icon name="wifi-outline" class="text-green-600 text-lg"></ion-icon>
+              </span>
+              <a href="../internet-email-thuisnetwerk-wifi.html">Internet - Email</a>
+            </div>
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100">
+                <ion-icon name="print-outline" class="text-yellow-600 text-lg"></ion-icon>
+              </span>
+              <a href="../printer-scanner.html">Printer - Scanner</a>
+            </div>
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100">
+                <ion-icon name="globe-outline" class="text-purple-600 text-lg"></ion-icon>
+              </span>
+              <a href="../websitebouwen.html">Webdesign</a>
+            </div>
+          </div>
+        </div>
+        <script>
+          // Dropdown toggle logic
+          document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('dienstenDropdownBtn');
+            const menu = document.getElementById('dienstenDropdownMenu');
+            const icon = document.getElementById('dienstenDropdownIcon');
+            btn.addEventListener('click', function () {
+              menu.classList.toggle('hidden');
+              icon.classList.toggle('rotate-180');
+            });
+          });
+        </script>
+      </div>
+      <!--todo sidebarCategories -->
+      <div id="sidebarCategories"
+        class="fixed top-0 w-80 h-screen bg-white p-6 shadow-lg hidden flex-col justify-start gap-4 font-semibold overflow-auto z-20">
+        <div class="w-full flex items-center justify-between">
+          <button type="button" class="closeButton text-xl hover:text-indigo-600">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--? mobile Navbar end-->
+  </header>
+  <main><section class="bg-white py-12 sm:py-14">
+  <div class="mx-auto max-w-4xl px-6">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="../index.html" class="hover:text-indigo-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="../media.html" class="hover:text-indigo-600">Media</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-700">Windows 11 traag na update? Zo los je het op</span>
+    </nav>
+
+    <header class="mb-8">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="text-xs px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-100">Prestaties</span>
+        <span class="text-xs px-3 py-1 rounded-full bg-gray-50 text-gray-700 border">Beginner</span>
+        <span class="text-xs px-3 py-1 rounded-full bg-gray-50 text-gray-700 border inline-flex items-center gap-1">
+          <ion-icon name="calendar-outline"></ion-icon>2025-08-06
+        </span>
+        <span class="text-xs px-3 py-1 rounded-full bg-gray-50 text-gray-700 border inline-flex items-center gap-1">
+          <ion-icon name="time-outline"></ion-icon>7 min
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">Windows 11 traag na update? Zo los je het op</h1>
+      <p class="text-gray-600 mt-3 text-lg">Is je Windows 11-pc ineens langzaam na een update? Met deze veilige stappen krijg je de prestaties terug.</p>
+    </header>
+
+    <article class="prose prose-gray max-w-none">
+      
+<h2>Waarom je pc na een update trager kan zijn</h2>
+<p>Na een update voert Windows vaak taken op de achtergrond uit (indexeren, optimaliseren, updates afronden). Dat kan tijdelijk traagheid veroorzaken.</p>
+
+<h2>Stap 1 — Geef Windows 30–60 minuten (en herstart)</h2>
+<ul>
+  <li>Laat de pc even aan staan met internet.</li>
+  <li>Herstart daarna één keer (niet afsluiten, maar echt herstarten).</li>
+</ul>
+
+<h2>Stap 2 — Controleer schijfruimte</h2>
+<p>Te weinig vrije ruimte vertraagt updates en prestaties. Ga naar Instellingen → Systeem → Opslag.</p>
+
+<h2>Stap 3 — Beperk opstartapps</h2>
+<p>Instellingen → Apps → Opstarten. Zet apps uit die je niet direct nodig hebt.</p>
+
+<h2>Stap 4 — Controleer drivers (vooral grafisch & chipset)</h2>
+<p>Een verkeerde of verouderde driver na een update is een klassieker. Werk bij via Windows Update (optionele updates) of via de fabrikant.</p>
+
+<h2>Stap 5 — Kijk naar achtergrondprocessen</h2>
+<p>Open Taakbeheer en sorteer op CPU/Schijf. Als één proces constant hoog blijft, kan dat de boosdoener zijn.</p>
+
+<h2>Wanneer Techuis inschakelen?</h2>
+<p>Als de traagheid langer dan 24–48 uur aanhoudt, doen we bij Techuis een snelle performance-audit (opstart, opslag, drivers, updates). Dit werkt uitstekend voor thuis en MKB in regio Rotterdam en Spijkenisse.</p>
+
+    </article>
+
+    <h3 class="mt-10 font-bold text-gray-900">Gerelateerde artikelen</h3>
+<ul class="list-disc ml-6 mt-2">
+  <li><a class="text-indigo-600 hover:underline" href="./windows-11-sneller-maken-2025.html">Windows 11 sneller maken in 2025</a></li>
+<li><a class="text-indigo-600 hover:underline" href="./windows-11-opschonen-veilig.html">Windows 11 opschonen (veilig)</a></li>
+</ul>
+
+    <section class="mt-12 rounded-2xl border bg-indigo-50 p-6 sm:p-8">
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div>
+      <h3 class="text-lg font-bold text-gray-900">Hulp nodig met Windows 11?</h3>
+      <p class="text-gray-700 mt-1">
+        Techuis helpt met optimalisatie, beveiliging, back-ups en probleemoplossing — op afstand of bij je thuis
+        (Rotterdam, Spijkenisse en Zuid-Holland).
+      </p>
+    </div>
+    <a href="../contact.html"
+       class="inline-flex items-center justify-center rounded-md bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-500 transition">
+      <ion-icon name="call-outline" class="mr-2"></ion-icon>
+      Neem contact op
+    </a>
+  </div>
+</section>
+
+    <div class="mt-10 border-t pt-8">
+      <a href="../media.html" class="inline-flex items-center gap-2 text-indigo-600 font-semibold hover:underline">
+        <ion-icon name="arrow-back-outline"></ion-icon> Terug naar alle artikelen
+      </a>
+    </div>
+  </div>
+</section></main>
+  <!-- Footer -->
+    <!-- Footer (Moderne Zakelijke Autoriteits-Footer) -->
+  <footer class="bg-slate-900 text-slate-300 border-t border-slate-800" aria-label="Voettekst">
+    <!-- 4 Gestructureerde Kolommen -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        
+        <!-- Kolom 1: Over Techuis ICT -->
+        <div>
+          <a href="../index.html" class="inline-block mb-4">
+            <span class="text-xl font-bold text-white tracking-tight">Techuis ICT</span>
+            <span class="block text-xs text-indigo-400 font-medium mt-0.5">Deskundig & gewoon bij u thuis</span>
+          </a>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Betrouwbare IT support en computerhulp aan huis in Zuid-Holland en direct op afstand. Zonder moeilijk vakjargon en met rustige uitleg.
+          </p>
+          <div class="space-y-1.5 text-xs text-slate-400">
+            <p><strong class="text-slate-300">Werkgebied:</strong> Zuid-Holland (o.a. Rotterdam, Spijkenisse, Hoogvliet & Dordrecht)</p>
+          </div>
+        </div>
+
+        <!-- Kolom 2: Onze Diensten -->
+        <div>
+          <h3 class="text-sm font-bold text-white tracking-wider uppercase mb-4">Onze Diensten</h3>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><a href="../computer-laptop.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> Computer & Laptop</a></li>
+            <li><a href="../internet-email-thuisnetwerk-wifi.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> WiFi & Thuisnetwerk</a></li>
+            <li><a href="../printer-scanner.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> Printer & Scanner</a></li>
+            <li><a href="../telefoon-mobile-apps.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> Telefoon, Mobiel & Apps</a></li>
+            <li><a href="../tablet-ipad.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> Tablet & Apple iPad</a></li>
+            <li><a href="../hulpopstand.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> Hulp op Afstand</a></li>
+            <li><a href="../huishoudapparaten.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> Smart TV & Huishoudapparaten</a></li>
+            <li><a href="../websitebouwen.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> Website & Webdesign</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Regio's & Informatie -->
+        <div>
+          <h3 class="text-sm font-bold text-white tracking-wider uppercase mb-4">IT Support per Regio</h3>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><a href="/it-support-rotterdam.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="location-outline" class="text-xs text-indigo-400"></ion-icon> IT Support Rotterdam</a></li>
+            <li><a href="/it-support-spijkenisse.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="location-outline" class="text-xs text-indigo-400"></ion-icon> IT Support Spijkenisse</a></li>
+            <li><a href="/it-support-hoogvliet.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="location-outline" class="text-xs text-indigo-400"></ion-icon> IT Support Hoogvliet</a></li>
+            <li><a href="/it-support-dordrecht.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="location-outline" class="text-xs text-indigo-400"></ion-icon> IT Support Dordrecht</a></li>
+            <li class="pt-2"><a href="../tarieven.html" class="text-indigo-400 hover:underline font-medium">Bekijk onze tarieven →</a></li>
+            <li><a href="../werkwijze.html" class="text-indigo-400 hover:underline font-medium">Hoe wij te werk gaan →</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 4: Direct Contact & Openingstijden -->
+        <div>
+          <h3 class="text-sm font-bold text-white tracking-wider uppercase mb-4">Direct Contact</h3>
+          <ul class="space-y-3 text-sm text-slate-400 mb-5">
+            <li>
+              <a href="tel:+31686427359" data-event="call-click" class="text-white font-semibold hover:text-indigo-400 transition-colors flex items-center gap-2">
+                <ion-icon name="call-outline" class="text-indigo-400 text-base"></ion-icon>
+                <span>06 - 86 42 73 59</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/31686427359?text=Hoi%20Techuis%2C%20ik%20heb%20hulp%20nodig%20met..." data-event="whatsapp-click" class="text-emerald-400 font-semibold hover:text-emerald-300 transition-colors flex items-center gap-2">
+                <ion-icon name="logo-whatsapp" class="text-base"></ion-icon>
+                <span>WhatsApp ons direct</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@techuis.nl" class="hover:text-white transition-colors flex items-center gap-2">
+                <ion-icon name="mail-outline" class="text-indigo-400 text-base"></ion-icon>
+                <span>info@techuis.nl</span>
+              </a>
+            </li>
+            <li class="flex items-start gap-2 text-xs text-slate-400 pt-1">
+              <ion-icon name="time-outline" class="text-indigo-400 text-sm shrink-0 mt-0.5"></ion-icon>
+              <span>Maandag t/m Zaterdag: 08:30 - 20:00 uur (Zondag op afspraak)</span>
+            </li>
+          </ul>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-800 border border-slate-700 text-xs font-semibold text-emerald-400">
+            <ion-icon name="shield-checkmark" class="text-emerald-400 text-sm"></ion-icon>
+            <span>No Cure, No Pay garantie</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Onderste Balk: Copyright, Juridisch & Betaalmethoden -->
+    <div class="border-t border-slate-800/80 bg-slate-950 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div>
+          <p>© 2026 Techuis ICT. Alle rechten voorbehouden.</p>
+        </div>
+
+        <div class="flex items-center gap-4 text-slate-400">
+          <a href="/privacybeleid.html" class="hover:text-white transition-colors">Privacybeleid</a>
+          <span>•</span>
+          <a href="/algemenvoorwaarden.html" class="hover:text-white transition-colors">Algemene Voorwaarden</a>
+          <span>•</span>
+          <a href="../overons.html" class="hover:text-white transition-colors">Over ons</a>
+        </div>
+
+        <div class="flex items-center gap-3 text-slate-400">
+          <span class="inline-flex items-center gap-1 font-semibold text-slate-300">
+            <ion-icon name="card-outline" class="text-indigo-400"></ion-icon> PIN aan de deur
+          </span>
+          <span>•</span>
+          <span class="inline-flex items-center gap-1 font-semibold text-slate-300">
+            <ion-icon name="phone-portrait-outline" class="text-emerald-400"></ion-icon> iDEAL / Tikkie
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- javascript -->
+  <script type="module" src="../assets/index.js"></script>
+
+<!-- Top 10 UX: Scroll to Top Button (Punt 9) -->
+  <button id="scrollToTopBtn" type="button" aria-label="Terug naar boven"
+    class="opacity-0 pointer-events-none fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-40 bg-white/95 text-gray-800 hover:text-indigo-600 hover:bg-white p-2.5 rounded-full shadow-lg border border-gray-200 transition-all duration-300 active:scale-95 flex items-center justify-center">
+    <ion-icon name="arrow-up-outline" class="text-xl"></ion-icon>
+  </button>
+
+</body>
+
+</html>

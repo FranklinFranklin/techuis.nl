@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /backup/
+Disallow: /assets/videos/
+Disallow: /___All_Errors.txt
+
+Sitemap: https://techuis.nl/sitemap.xml

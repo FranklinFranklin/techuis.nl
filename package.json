@@ -1,0 +1,12 @@
+{
+  "name": "techuis-ict",
+  "version": "1.0.0",
+  "description": "Techuis ICT - IT Support & Computerhulp Website",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/src/input.css -o ./assets/css/tailwind.min.css --minify",
+    "dev:css": "tailwindcss -i ./assets/src/input.css -o ./assets/css/tailwind.min.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

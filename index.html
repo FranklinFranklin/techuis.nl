@@ -1,1814 +1,1859 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--* favicon -->
-    <link
-      rel="shortcut icon"
-      href="./assets/images/logo/favicon.ico"
-      type="image/x-icon"
-    />
-    <!--! css link -->
-    <link rel="stylesheet" href="./assets/style.css" />
-    <!--? swiperjs cdn link -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <!--todo tailwind cdn link -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: "#da373d",
-            },
-          },
-        },
-      };
-    </script>
+<html lang="nl" class="scroll-smooth">
 
-    <title>eCommerece</title>
-  </head>
-  <body>
-    <!--! newspaper popup -->
-    <div
-      id="newspaper"
-      class="z-20 fixed w-screen h-screen hidden items-center justify-center"
-    >
-      <div
-        id="newspaperOverlay"
-        class="z-10 fixed top-0 w-screen h-screen bg-[#00000066]"
-      ></div>
-      <div
-        id="newspaperBox"
-        class="z-20 w-4/5 lg:w-3/6 h-2/5 lg:h-3/5 bg-white flex items-center rounded-md overflow-hidden border shadow-md"
-      >
-        <div class="hidden md:flex md:w-1/2 h-full">
-          <img
-            class="w-full h-full"
-            src="./assets/images/newsletter.png"
-            alt="newsletter"
-          />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/style.css" />
+
+  <!-- tailwind compiled css -->
+  <link rel="stylesheet" href="./assets/css/tailwind.min.css" />
+  <!-- icons -->
+
+  <!-- SEO -->
+  <title>IT Support & Computerhulp Zuid-Holland | Techuis ICT</title>
+  <meta name="description"
+    content="Techuis ICT biedt snelle IT support en computerhulp in Zuid-Holland (o.a. Rotterdam). Laptop, WiFi, netwerk, telefoon en printer. Aan huis of op afstand. Bel of WhatsApp voor een afspraak.">
+  <link rel="canonical" href="https://techuis.nl/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IT Support & Computerhulp Zuid-Holland | Techuis ICT">
+  <meta property="og:description"
+    content="Snelle hulp bij laptop-, WiFi- en netwerkproblemen. Aan huis of op afstand in Zuid-Holland. Bel of WhatsApp.">
+  <meta property="og:url" content="https://techuis.nl/">
+  <!-- Zet deze afbeelding klaar op je site (1200x630): /assets/images/logo/og-image.jpg -->
+  <meta property="og:image" content="https://techuis.nl/assets/images/logo/og-image.jpg">
+
+    <!-- LocalBusiness Schema (Rich Snippets) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "ComputerRepairService"],
+      "name": "Techuis ICT",
+      "image": "https://techuis.nl/assets/images/logo/og-image.jpg",
+      "url": "https://techuis.nl/",
+      "telephone": "+31686427359",
+      "email": "info@techuis.nl",
+      "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "142",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NL",
+        "addressRegion": "Zuid-Holland"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.9244,
+        "longitude": 4.4777
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:30",
+        "closes": "20:00"
+      },
+      "areaServed": ["Zuid-Holland", "Rotterdam", "Dordrecht", "Spijkenisse", "Hoogvliet", "Hellevoetsluis", "Barendrecht", "Schiedam"]
+    }
+  </script>
+
+  <!-- Google Analytics with Consent Mode v2 (AVG/GDPR Compliant) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    // Standaard geblokkeerd totdat bezoeker accepteert
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    });
+
+    if (document.cookie.indexOf("cookieConsent=accepted") !== -1) {
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-522WJG5528', { 'anonymize_ip': true });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-522WJG5528"></script>
+  <!-- Google Analytics End -->
+
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:site_name" content="Techuis ICT" />
+
+  <!-- FAQPage Schema (Rich Snippets Google NL) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hoe snel kunnen jullie langskomen of helpen op afstand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vaak dezelfde dag of binnen 24 uur, afhankelijk van uw locatie en de urgentie van het probleem. Voor spoedgevallen is WhatsApp meestal het snelst."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Helpen jullie ook met uitleg (bijvoorbeeld voor ouderen)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Wij nemen ruim de tijd en leggen alles rustig en stap-voor-stap uit aan uw eigen keukentafel, zonder moeilijk technisch vakjargon."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "In welke regio werken jullie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Techuis ICT werkt in heel Zuid-Holland, waaronder Rotterdam, Spijkenisse, Hoogvliet, Dordrecht, Barendrecht, Schiedam en omliggende gemeenten."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat kost IT support of computerhulp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wij werken met transparante tarieven zonder verrassingen: € 14,50 per kwartier op afstand, of € 29,50 per 20 minuten aan huis inclusief voorrijkosten in de regio. No Cure, No Pay bij de eerste diagnose."
+        }
+      }
+    ]
+  }
+  </script>
+
+</head>
+
+<body>
+  <header class="header w-full">
+    <!-- Cookie Consent Banner (AVG/GDPR Compliant - Discreet in de hoek) -->
+    <section id="cookieConsent"
+      class="fixed rounded-2xl bottom-4 right-4 sm:bottom-6 sm:right-6 w-[calc(100%-2rem)] sm:w-auto sm:max-w-md bg-white/95 backdrop-blur-md z-50 shadow-2xl border border-gray-200/90 transition-all duration-300"
+      style="display: none;">
+      <div class="p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
+        <span class="text-xs sm:text-sm text-gray-700 leading-relaxed flex-1">
+          Techuis ICT gebruikt cookies om de website te analyseren en verbeteren.
+          <a href="privacybeleid.html" class="text-indigo-600 underline font-medium hover:text-indigo-800 ml-1">Privacybeleid</a>
+        </span>
+        <div class="flex gap-2 w-full sm:w-auto justify-end shrink-0">
+          <button type="button" id="acceptCookies"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-3.5 py-2 rounded-xl transition shadow-xs">Accepteren</button>
+          <button type="button" id="declineCookies"
+            class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-semibold px-3 py-2 rounded-xl border border-gray-200 transition">Weigeren</button>
         </div>
-        <div
-          class="w-full md:w-1/2 h-full flex flex-col justify-center p-12 px-8 gap-4 relative"
-        >
-          <button
-            class="closeButton absolute top-4 right-4 text-2xl hover:text-red-500"
-          >
-            <ion-icon name="close-circle-outline"></ion-icon>
-          </button>
-          <h3 class="text-xl font-bold text-gray-800">Subscribe Newsletter.</h3>
-          <p class="text-md text-gray-600 font-semibold">
-            Subscribe the <span class="text-lg font-semibold">Anon</span> to get
-            latest products and discount update.
-          </p>
-          <input class="border p-2" type="email" placeholder="Email Address" />
-          <button
-            class="rounded-md self-center py-2 px-3 bg-gray-900 text-white hover:bg-red-500"
-          >
-            SUBSCRIBE
-          </button>
+      </div>
+    </section>
+
+    <script>
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+      }
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        if (!getCookie("cookieConsent")) {
+          document.getElementById("cookieConsent").style.display = "block";
+        }
+        document.getElementById("acceptCookies").onclick = function () {
+          setCookie("cookieConsent", "accepted", 365);
+          if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+              'analytics_storage': 'granted'
+            });
+          }
+          document.getElementById("cookieConsent").style.display = "none";
+        };
+        document.getElementById("declineCookies").onclick = function () {
+          setCookie("cookieConsent", "declined", 365);
+          if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+              'analytics_storage': 'denied'
+            });
+          }
+          document.getElementById("cookieConsent").style.display = "none";
+        };
+      });
+    </script>
+    <!-- Cookie Consent Banner End -->
+
+    <!-- topHeader -->
+    <div class="top-header w-screen flex flex-col items-center justify-between">
+      <div class="flex w-full items-center justify-between py-2.5 px-4 md:px-20 border-b">
+        <div class="icons hidden lg:flex items-center gap-2">
+          <a class="text-gray-700 bg-gray-300/50 p-1.5 rounded-md hover:scale-110 hover:text-white hover:bg-indigo-600 flex items-center justify-center transition-all"
+            href="#" aria-label="Instagram">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a class="text-gray-700 bg-gray-300/50 p-1.5 rounded-md hover:scale-110 hover:text-white hover:bg-indigo-600 flex items-center justify-center transition-all"
+            href="#" aria-label="LinkedIn">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a class="text-gray-700 bg-gray-300/50 p-1.5 rounded-md hover:scale-110 hover:text-white hover:bg-indigo-600 flex items-center justify-center transition-all"
+            href="#" aria-label="GitHub">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs font-semibold text-gray-700">
+          <div class="live-status-badge inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-[11px]">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Nu bereikbaar: 08:30 - 20:00</span>
+          </div>
+          <span class="hidden md:inline text-gray-300">|</span>
+          <a href="tel:+31686427359" data-event="call-click" class="hover:text-indigo-600 flex items-center gap-1 text-gray-700 transition-colors">
+            <ion-icon name="call-outline" class="text-indigo-600 text-sm"></ion-icon> 06 - 86 42 73 59
+          </a>
+          <span class="hidden md:inline text-gray-300">|</span>
+          <a href="https://wa.me/31686427359?text=Hoi%20Techuis%2C%20ik%20heb%20hulp%20nodig%20met..." data-event="whatsapp-click" class="hover:text-green-600 flex items-center gap-1 text-gray-700 transition-colors">
+            <ion-icon name="logo-whatsapp" class="text-green-600 text-sm"></ion-icon> WhatsApp
+          </a>
+          <span class="hidden lg:inline text-gray-500 text-[11px]">Ma - Za: 08:30 - 20:00</span>
+        </div>
+
+        <div class="select md:flex " id="google_translate_element"></div>
+      </div>
+
+      <div class="flex w-full items-center justify-between py-3 px-4 sm:px-6 md:px-24">
+        <div>
+          <a href="index.html" class="block">
+            <span class="font-semibold text-xl text-gray-800 block">Techuis ICT</span>
+            <span class="block text-[10px] text-gray-500 font-medium">Deskundig en efficiënt, gewoon bij u thuis!</span>
+          </a>
+        </div>
+        <!-- Mobile Menu Toggle (lg:hidden) -->
+        <button id="openNavbarButton" type="button" aria-label="Open menu"
+          class="lg:hidden p-2 rounded-xl border border-gray-200 text-gray-700 hover:text-indigo-600 hover:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors flex items-center justify-center text-2xl">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+
+        <!-- desktop Navbar -->
+        <div class="desktopNavbar">
+          <nav class="my-4 hidden lg:flex justify-center">
+            <ul class="desktopNavbarUl flex justify-center items-center gap-12 font-sm font-bold text-gray-600">
+                <li class="nav_items relative category_nav_item font-bold">
+                  <a href="#Categories">Diensten</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all ease-in-out"></span>
+
+                  <ul
+                    class="categoriesItem hidden absolute top-10 shadow-lg rounded-xl grid-cols-4 p-4 gap-4 border-2 border-double text-gray-400 font-normal bg-white z-10">
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Telefoon - Mobiel - APP
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li><a href="./telefoon-mobile-apps.html"> Vaste Telefoon </a></li>
+                        <li><a href="./telefoon-mobile-apps.html"> Mobiel </a></li>
+                        <li><a href="./telefoon-mobile-apps.html"> App </a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Computer - Laptop
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li><a href="./computer-laptop.html"> Computer </a></li>
+                        <li><a href="./computer-laptop.html"> Laptop </a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Tablet - IPAD
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li><a href="./tablet-ipad.html"> Tablet </a></li>
+                        <li><a href="./tablet-ipad.html"> Apple IPAD </a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Internet - Email
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li><a href="./internet-email-thuisnetwerk-wifi.html"> Internet </a></li>
+                        <li><a href="./internet-email-thuisnetwerk-wifi.html"> Email </a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Printer - Scanner
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li><a href="./printer-scanner.html"> Printer </a></li>
+                        <li><a href="./printer-scanner.html"> Scanner </a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Website - Webshop - Webdesign
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li><a href="./websitebouwen.html"> Website </a></li>
+                        <li><a href="./websitebouwen.html"> Webshop </a></li>
+                        <li><a href="./websitebouwen.html"> Webdesign </a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Huishoud Apparaten
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li><a href="./huishoudapparaten.html"> Smart TV </a></li>
+                        <li><a href="./huishoudapparaten.html"> Smart Wasmachine </a></li>
+                        <li><a href="./huishoudapparaten.html"> Smart Deurbel </a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav_items relative nav_item_tarieven">
+                  <a href="./tarieven.html">Tarieven</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all ease-in-out"></span>
+                </li>
+
+                <li class="nav_items relative wonav_item_tarieven">
+                  <a href="./werkwijze.html">Werkwijze</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all ease-in-out"></span>
+                </li>
+
+                <li class="nav_items relative nav_item_contact">
+                  <a href="./contact.html">Contact</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all ease-in-out"></span>
+                </li>
+
+                <li class="nav_items relative nav_item_overons">
+                  <a href="./overons.html">Over ons</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all ease-in-out"></span>
+                </li>
+
+                <li class="nav_items relative nav_item_media">
+                  <a href="./media.html">Media</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all ease-in-out"></span>
+                </li>
+              </ul>
+            </nav>
+        </div>
+
+        <div class="desktopNavbar">
+          <ul class=" flex justify-center items-center gap-12 font-sm font-bold text-gray-600">
+            <li>
+              <a href="tel:+31686427359" data-event="call-click" class="inline-flex items-center gap-2 rounded-md bg-indigo-600 shadow-lg shadow-indigo-500/50 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 transition-all"><ion-icon name="call-outline"></ion-icon> Maak een afspraak</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <header class="header w-full">
-      <!--! topHeader -->
-      <div
-        class="top-header w-screen flex flex-col items-center justify-between border-b"
-      >
-        <div class="flex w-full items-center justify-between p-4 md:px-20 border-b">
-          <div class="icons hidden lg:flex items-center gap-2">
-            <a
-              class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center transition-all"
-              href="#"
-            >
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-            <a
-              class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center transition-all"
-              href="#"
-            >
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-            <a
-              class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center transition-all"
-              href="#"
-            >
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </div>
-          <h3 class="text-gray-400 font-semibold text-xs">
-            FREE SHIPPING THIS WEEK ORDER OVER - $55
-          </h3>
-          <div class="select hidden md:flex">
-            <select class="mr-2 p-1 px-2 text-sm font-semibold" id="currency">
-              <option value="USD">USD $</option>
-              <option value="EUR">EUR €</option>
-            </select>
-            <select class="mr-2 p-1 px-2 text-sm font-semibold" id="language">
-              <option value="Persian">English</option>
-              <option value="English">Persian</option>
-            </select>
-          </div>
-        </div>
-        <div
-          class="gap-4 flex flex-col sm:flex-row w-full items-center justify-between p-6 md:px-24"
-        >
-          <h1 class="font-semibold text-4xl text-gray-600">Anon</h1>
-          <form class="relative w-full sm:w-3/5">
-            <input
-              class="w-full h-full p-2 border rounded-xl"
-              placeholder="Enter Your Product Name..."
-              id="search"
-              type="text"
-            />
-            <label class="absolute right-2 top-2" for="search">
-              <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
-            </label>
-          </form>
-          <div class="icons hidden mr-2 text-3xl md:flex gap-8 text-gray-600">
-            <div class="relative">
-              <ion-icon name="person-outline"></ion-icon>
-            </div>
-            <div class="relative">
-              <span
-                class="text-xs text-center font-semibold text-white absolute -top-2 -right-2 w-4 h-4 bg-red-400 rounded-full"
-                >0</span
-              >
-              <ion-icon name="heart-outline"></ion-icon>
-            </div>
-            <div class="relative">
-              <span
-                class="text-xs text-center font-semibold text-white absolute -top-2 -right-2 w-4 h-4 bg-red-400 rounded-full"
-                >0</span
-              >
-              <ion-icon name="bag-handle-outline"></ion-icon>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--! topHeader -->
-      <!--? navbar -->
-      <!--todo desktop Navbar -->
-      <div class="desktopNavbar">
-        <nav class="my-4 hidden lg:flex justify-center">
-          <ul
-            class="desktopNavbarUl flex justify-center items-center gap-12 font-sm font-bold text-gray-600"
-          >
-            <li class="nav_items relative">
-              <a href="#Home">HOME</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
-              ></span>
-            </li>
-            <li class="nav_items relative category_nav_item">
-              <a href="#Categories">CATEGORIES</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
-              ></span>
-              <!--? hoverItems -->
-              <ul
-                class="categoriesItem absolute top-10 shadow-lg rounded-xl hidden grid-cols-4 p-4 gap-4 border text-gray-400 font-normal bg-white z-10"
-              >
-                <li>
-                  <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
-                    Electronics
-                  </h3>
-                  <ul class="flex flex-col items-start justify-start gap-2">
-                    <li>
-                      <a href="#"> Desktop </a>
-                    </li>
-                    <li>
-                      <a href="#"> Laptop </a>
-                    </li>
-                    <li>
-                      <a href="#"> Camera </a>
-                    </li>
-                    <li>
-                      <a href="#"> Tablet </a>
-                    </li>
-                    <li>
-                      <a href="#"> Headphone </a>
-                    </li>
-                    <li>
-                      <img
-                        src="./assets/images/electronics-banner-1.jpg"
-                        alt="pic"
-                      />
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
-                    Men's
-                  </h3>
-                  <ul class="flex flex-col items-start justify-start gap-2">
-                    <li>
-                      <a href="#"> Formal </a>
-                    </li>
-                    <li>
-                      <a href="#"> Casual </a>
-                    </li>
-                    <li>
-                      <a href="#"> Sports </a>
-                    </li>
-                    <li>
-                      <a href="#"> Jacket </a>
-                    </li>
-                    <li>
-                      <a href="#"> Sunglasses </a>
-                    </li>
-                    <li>
-                      <img
-                        src="./assets/images/electronics-banner-2.jpg"
-                        alt="pic"
-                      />
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
-                    Women's
-                  </h3>
-                  <ul class="flex flex-col items-start justify-start gap-2">
-                    <li>
-                      <a href="#"> Formal </a>
-                    </li>
-                    <li>
-                      <a href="#"> Casual </a>
-                    </li>
-                    <li>
-                      <a href="#"> Perfume </a>
-                    </li>
-                    <li>
-                      <a href="#"> Cosmetics </a>
-                    </li>
-                    <li>
-                      <a href="#"> Bags </a>
-                    </li>
-                    <li><img src="./assets/images/mens-banner.jpg" alt="pic" /></li>
-                  </ul>
-                </li>
-                <li>
-                  <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
-                    Electronics
-                  </h3>
-                  <ul class="flex flex-col items-start justify-start gap-2">
-                    <li>
-                      <a href="#"> Smart </a>
-                      Watch
-                    </li>
-                    <li>
-                      <a href="#"> Smart </a>
-                      TV
-                    </li>
-                    <li>
-                      <a href="#"> Keyboard </a>
-                    </li>
-                    <li>
-                      <a href="#"> Mouse </a>
-                    </li>
-                    <li>
-                      <a href="#"> Microphone </a>
-                    </li>
-                    <li>
-                      <img src="./assets/images/womens-banner.jpg" alt="pic" />
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <!--? hoverItems -->
-            </li>
-            <li class="nav_items relative men_nav_item">
-              <a href="#Men">MEN'S</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
-              ></span>
-              <!--? hoverItems -->
-              <ul
-                class="hoveredItems w-52 absolute top-10 hidden flex-col items-start justify-start gap-2 p-4 rounded-xl shadow-lg border font-normal bg-white"
-              >
-                <li>
-                  <a href="#">Shirt</a>
-                </li>
-                <li>
-                  <a href="#">Shorts & Jeans</a>
-                </li>
-                <li>
-                  <a href="#">Safety</a>
-                </li>
-                <li>
-                  <a href="#">Wallet</a>
-                </li>
-              </ul>
-              <!--? hoverItems -->
-            </li>
-            <li class="nav_items relative women_nav_item">
-              <a href="#Women">WOMEN'S</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
-              ></span>
-              <!--? hoverItems -->
-              <ul
-                class="hoveredItems w-52 absolute top-10 hidden flex-col items-start justify-start gap-2 p-4 rounded-xl shadow-lg border font-normal bg-white"
-              >
-                <li>
-                  <a href="#">Dress & Frock</a>
-                </li>
-                <li>
-                  <a href="#">Earrings</a>
-                </li>
-                <li>
-                  <a href="#">Necklace</a>
-                </li>
-                <li>
-                  <a href="#">Makeup Kit</a>
-                </li>
-              </ul>
-              <!--? hoverItems -->
-            </li>
-            <li class="nav_items relative jewelry_nav_item">
-              <a href="#Jewelry">JEWELRY</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
-              ></span>
-              <!--? hoverItems -->
-              <ul
-                class="hoveredItems w-52 absolute top-10 hidden flex-col items-start justify-start gap-2 p-4 rounded-xl shadow-lg border font-normal bg-white"
-              >
-                <li>
-                  <a href="#">Earrings</a>
-                </li>
-                <li>
-                  <a href="#">Couple Rings</a>
-                </li>
-                <li>
-                  <a href="#">Necklace</a>
-                </li>
-                <li>
-                  <a href="#">Bracelets</a>
-                </li>
-              </ul>
-              <!--? hoverItems -->
-            </li>
-            <li class="nav_items relative perfume_nav_item">
-              <a href="#Perfume">PERFUME</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
-              ></span>
-              <!--? hoverItems -->
-              <ul
-                class="hoveredItems w-52 absolute top-10 hidden flex-col items-start justify-start gap-2 p-4 rounded-xl shadow-lg border font-normal bg-white"
-              >
-                <li>
-                  <a href="#">Clothes Perfume</a>
-                </li>
-                <li>
-                  <a href="#">Flower Fragrance</a>
-                </li>
-                <li>
-                  <a href="#">Safety</a>
-                </li>
-                <li>
-                  <a href="#">Air Freshener</a>
-                </li>
-              </ul>
-              <!--? hoverItems -->
-            </li>
-            <li class="nav_items relative">
-              <a href="#Blog">BLOG</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
-              ></span>
-            </li>
-            <li class="nav_items relative">
-              <a href="#HotOffers">HOT OFFERS</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
-              ></span>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <!-- mobile Navbar start -->
+    <div class="mobileNavbar">
+      
 
-      <!--? mobile Navbar -->
-      <div class="mobileNavbar">
-        <!--? navbar button -->
-        <div
-          style="box-shadow: 0 0 0.3rem lightgray"
-          class="z-10 bg-white w-96 lg:hidden flex justify-around items-center p-4 border rounded-t-xl fixed bottom-0 left-1/2 -translate-x-1/2 text-lg"
-        >
-          <button id="openNavbarButton" type="button">
-            <ion-icon name="menu-outline"></ion-icon>
-          </button>
-
-          <button class="relative" type="button">
-            <span
-              class="text-xs text-center font-semibold text-white absolute -top-2 -right-2 w-4 h-4 bg-red-400 rounded-full"
-            >
-              0
-            </span>
-            <ion-icon name="bag-handle-outline"></ion-icon>
-          </button>
-
-          <button type="button">
-            <ion-icon name="home-outline"></ion-icon>
-          </button>
-
-          <button class="relative" type="button">
-            <span
-              class="text-xs text-center font-semibold text-white absolute -top-2 -right-2 w-4 h-4 bg-red-400 rounded-full"
-            >
-              0
-            </span>
-            <ion-icon name="heart-outline"></ion-icon>
-          </button>
-
-          <button id="categoriesBtn" type="button">
-            <ion-icon name="grid-outline"></ion-icon>
-          </button>
-        </div>
-        <!--* overlay -->
-        <div
-          id="overlayNavbar"
-          class="hidden fixed top-0 left-0 w-screen h-screen bg-gray-500/30 z-10"
-        ></div>
-
-        <!--! sidebarNavbar -->
-        <div
-          class="fixed top-0 w-72 h-screen bg-white p-4 shadow-lg hidden flex-col justify-start gap-4 text-lg font-semibold overflow-auto z-20"
-          id="sidebarNavbar"
-        >
-          <div class="flex justify-between border-b-2 py-4">
-            <h3 class="text-red-400">Menu</h3>
-            <button class="closeButton hover:text-red-500">
-              <ion-icon name="close-circle-outline"></ion-icon>
-            </button>
-          </div>
-          <div class="mobile_navbar_item border-b pb-3 text-gray-600">Home</div>
-          <div class="mobile_navbar_item border-b pb-3 text-gray-600">
-            <details>
-              <a href="#">Shirt</a>
-              <a href="#">Shorts & Jeans</a>
-              <a href="#">Safety Shoes</a>
-              <a href="#">Wallet</a>
-              <summary>Men's</summary>
-            </details>
-          </div>
-          <div class="mobile_navbar_item border-b pb-3 text-gray-600">
-            <details>
-              <a href="#">Dress & Frock</a>
-              <a href="#">Earrings</a>
-              <a href="#">Necklace</a>
-              <a href="#">Makeup Kit</a>
-              <summary>Women's</summary>
-            </details>
-          </div>
-          <div class="mobile_navbar_item border-b pb-3 text-gray-600">
-            <details>
-              <a href="#">Earrings</a>
-              <a href="#">Couple Rings</a>
-              <a href="#">Necklace</a>
-              <a href="#">Bracelets</a>
-              <summary>Jewelry</summary>
-            </details>
-          </div>
-          <div class="mobile_navbar_item border-b pb-3 text-gray-600">
-            <details>
-              <a href="#">Clothes Perfume</a>
-              <a href="#">Deodorant</a>
-              <a href="#">Flower Fragrance</a>
-              <a href="#">Air Freshener</a>
-              <summary>Perfume</summary>
-            </details>
-          </div>
-          <div class="mobile_navbar_item border-b pb-3 text-gray-600">
-            <a href="#">Blog</a>
-          </div>
-          <div class="mobile_navbar_item border-b pb-3 text-gray-600">
-            <a href="#">Hot Offers</a>
-          </div>
-
-          <div class="mobile_navbar_item border-b pb-3 text-gray-600">
-            <details>
-              <div class="border rounded-xl shadow-xl flex flex-col items-start">
-                <a class="border-b w-full pb-2" href="#">English</a>
-                <a class="border-b w-full pb-2" href="#">Persian</a>
-              </div>
-              <summary>Language</summary>
-            </details>
-          </div>
-          <div class="mobile_navbar_item border-b pb-3 text-gray-600">
-            <details>
-              <div class="border rounded-xl shadow-xl flex flex-col items-start">
-                <a class="border-b w-full pb-2" href="#">USD $</a>
-                <a class="border-b w-full pb-2" href="#">EUR €</a>
-              </div>
-              <summary>Currency</summary>
-            </details>
-          </div>
-
-          <div class="icons flex items-center justify-center gap-4">
-            <a
-              class="text-gray-900 bg-gray-300/50 p-2 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center"
-              href="#"
-            >
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-            <a
-              class="text-gray-900 bg-gray-300/50 p-2 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center"
-              href="#"
-            >
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-            <a
-              class="text-gray-900 bg-gray-300/50 p-2 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center"
-              href="#"
-            >
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </div>
-        </div>
-
-        <!--todo sidebarCategories -->
-        <div
-          id="sidebarCategories"
-          class="fixed top-0 w-80 h-screen bg-white p-6 shadow-lg hidden flex-col justify-start gap-4 font-semibold overflow-auto z-20"
-        >
-          <div class="categories w-full h-auto">
-            <div class="w-full flex items-center justify-between">
-              <h1 class="text-lg font-semibold mb-4">CATEGORY</h1>
-              <button class="closeButton text-xl hover:text-red-500">
-                <ion-icon name="close-circle-outline"></ion-icon>
-              </button>
-            </div>
-            <div class="border-b pb-3 text-lg text-gray-600">
-              <details>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Shirt</a>
-                  <span>300</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Shorts & Jeans</a>
-                  <span>30</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Jacket</a>
-                  <span>50</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Dress & Frock</a>
-                  <span>120</span>
-                </div>
-                <summary>
-                  <div class="flex items-center gap-2">
-                    Clothes
-                    <img
-                      class="w-4 h-4"
-                      src="./assets/images/icons/dress.svg"
-                      alt="productPicture"
-                    />
-                  </div>
-                </summary>
-              </details>
-            </div>
-            <div class="border-b pb-3 text-lg text-gray-600">
-              <details>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Sports</a>
-                  <span>300</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Formal</a>
-                  <span>30</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Casual</a>
-                  <span>50</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Safety Shoes</a>
-                  <span>120</span>
-                </div>
-                <summary>
-                  <div class="flex items-center gap-2">
-                    Footwear
-                    <img
-                      class="w-4 h-4"
-                      src="./assets/images/icons/shoes.svg"
-                      alt="productPicture"
-                    />
-                  </div>
-                </summary>
-              </details>
-            </div>
-            <div class="border-b pb-3 text-lg text-gray-600">
-              <details>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Earrings</a>
-                  <span>300</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Couple Rings</a>
-                  <span>30</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Necklace</a>
-                  <span>50</span>
-                </div>
-                <summary>
-                  <div class="flex items-center gap-2">
-                    Jewelry
-                    <img
-                      class="w-4 h-4"
-                      src="./assets/images/icons/jewelry.svg"
-                      alt="productPicture"
-                    />
-                  </div>
-                </summary>
-              </details>
-            </div>
-            <div class="border-b pb-3 text-lg text-gray-600">
-              <details>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Clothes Perfume</a>
-                  <span>300</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Deodorant</a>
-                  <span>30</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Jacket</a>
-                  <span>50</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Dress & Frock</a>
-                  <span>120</span>
-                </div>
-                <summary>
-                  <div class="flex items-center gap-2">
-                    Perfume
-                    <img
-                      class="w-4 h-4"
-                      src="./assets/images/icons/perfume.svg"
-                      alt="productPicture"
-                    />
-                  </div>
-                </summary>
-              </details>
-            </div>
-            <div class="border-b pb-3 text-lg text-gray-600">
-              <details>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Shampoo</a>
-                  <span>300</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Sunscreen</a>
-                  <span>30</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Body Wash</a>
-                  <span>50</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Makeup Kit</a>
-                  <span>120</span>
-                </div>
-                <summary>
-                  <div class="flex items-center gap-2">
-                    Cosmetics
-                    <img
-                      class="w-4 h-4"
-                      src="./assets/images/icons/cosmetics.svg"
-                      alt="productPicture"
-                    />
-                  </div>
-                </summary>
-              </details>
-            </div>
-            <div class="border-b pb-3 text-lg text-gray-600">
-              <details>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Sunglasses</a>
-                  <span>23</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Lenses</a>
-                  <span>53</span>
-                </div>
-                <summary>
-                  <div class="flex items-center gap-2">
-                    Glasses
-                    <img
-                      class="w-4 h-4"
-                      src="./assets/images/icons/glasses.svg"
-                      alt="productPicture"
-                    />
-                  </div>
-                </summary>
-              </details>
-            </div>
-            <div class="border-b pb-3 text-lg text-gray-600">
-              <details>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Wallet</a>
-                  <span>300</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Purse</a>
-                  <span>30</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Gym Backpack</a>
-                  <span>50</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Shopping Bag</a>
-                  <span>120</span>
-                </div>
-                <summary>
-                  <div class="flex items-center gap-2">
-                    Bags
-                    <img
-                      class="w-4 h-4"
-                      src="./assets/images/icons/bag.svg"
-                      alt="productPicture"
-                    />
-                  </div>
-                </summary>
-              </details>
-            </div>
-          </div>
-
-          <div
-            class="bestsellers w-full h-auto mt-2 flex flex-col items-start justify-start gap-4"
-          >
-            <h2 class="text-lg font-semibold">BEST SELLERS</h2>
-            <div class="flex items-center justify-start gap-2">
-              <div class="w-20 h-20 p-2 border shadow-lg bg-gray-300/20 rounded-md">
-                <img
-                  class="w-full h-full"
-                  src="./assets/images/products/1.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="text-gray-700">
-                <h4 class="text-gray-900">Baby Fabric Shoes</h4>
-                <div class="stars text-yellow-500">
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star-half-outline"></ion-icon>
-                </div>
-                <div class="flex items-center justify-start gap-4">
-                  <s class="text-gray-500">$14.00</s> <strong>$7.00</strong>
-                </div>
-              </div>
-            </div>
-            <div class="flex items-center justify-start gap-2">
-              <div class="w-20 h-20 p-2 border shadow-lg bg-gray-300/20 rounded-md">
-                <img
-                  class="w-full h-full"
-                  src="./assets/images/products/2.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="text-gray-700">
-                <h4 class="text-gray-900">Men's Hoodies T-Shirt</h4>
-                <div class="stars text-yellow-500">
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star-half-outline"></ion-icon>
-                  <ion-icon name="star-outline"></ion-icon>
-                </div>
-                <div class="flex items-center justify-start gap-4">
-                  <s class="text-gray-500">$5.00</s> <strong>$2.00</strong>
-                </div>
-              </div>
-            </div>
-            <div class="flex items-center justify-start gap-2">
-              <div class="w-20 h-20 p-2 border shadow-lg bg-gray-300/20 rounded-md">
-                <img
-                  class="w-full h-full"
-                  src="./assets/images/products/3.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="text-gray-700">
-                <h4 class="text-gray-900">Girls T-Shirt</h4>
-                <div class="stars text-yellow-500">
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star-half-outline"></ion-icon>
-                  <ion-icon name="star-outline"></ion-icon>
-                  <ion-icon name="star-outline"></ion-icon>
-                </div>
-                <div class="flex items-center justify-start gap-4">
-                  <s class="text-gray-500">$10.00</s> <strong>$5.00</strong>
-                </div>
-              </div>
-            </div>
-            <div class="flex items-center justify-start gap-2">
-              <div class="w-20 h-20 p-2 border shadow-lg bg-gray-300/20 rounded-md">
-                <img
-                  class="w-full h-full"
-                  src="./assets/images/products/4.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="text-gray-700">
-                <h4 class="text-gray-900">Woolen Hat For Men</h4>
-                <div class="stars text-yellow-500">
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star-half-outline"></ion-icon>
-                </div>
-                <div class="flex items-center justify-start gap-4">
-                  <s class="text-gray-500">$24.00</s> <strong>$17.00</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--? Navbar -->
-    </header>
-    <main>
-      <!-- !banner -->
-      <div class="banner mt-10 lg:-mt-4 flex items-center justify-center">
-        <div class="swiper swiper-js">
-          <div
-            class="swiper-wrapper h-64 lg:h-96 w-full lg:w-5/6 relative"
-            id="swiperSlide"
-          ></div>
-
-          <div class="swiper-scrollbar"></div>
-        </div>
-      </div>
-      <!--todo Title Categories  -->
-      <div class="flex items-center justify-center mt-10">
-        <div class="swiper categories_swiper">
-          <div class="swiper-wrapper relative gap-4" id="titlecategories"></div>
-
-          <div class="swiper-scrollbar"></div>
-        </div>
-      </div>
-
-      <!--? Products and categories  -->
-      <section
-        class="w-full min-h-auto px-8 lg:px-0 lg:w-5/6 mx-auto mt-16 flex gap-8"
-      >
-        <aside class="sticky top-0 hidden lg:flex flex-col lg:w-1/4 max-h-screen">
-          <div class="aside_section overflow-y-auto">
-            <div class="categories w-full rounded-xl p-4 bg-white border shadow-lg">
-              <h1 class="text-xl font-semibold mb-4">CATEGORY</h1>
-              <div class="border-b pb-3 text-lg text-gray-600">
-                <details>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Shirt</a>
-                    <span>300</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Shorts & Jeans</a>
-                    <span>30</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Jacket</a>
-                    <span>50</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Dress & Frock</a>
-                    <span>120</span>
-                  </div>
-                  <summary>
-                    <div class="flex items-center gap-2">
-                      Clothes
-                      <img
-                        class="w-4 h-4"
-                        src="./assets/images/icons/dress.svg"
-                        alt="productPicture"
-                      />
-                    </div>
-                  </summary>
-                </details>
-              </div>
-              <div class="border-b pb-3 text-lg text-gray-600">
-                <details>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Sports</a>
-                    <span>300</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Formal</a>
-                    <span>30</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Casual</a>
-                    <span>50</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Safety Shoes</a>
-                    <span>120</span>
-                  </div>
-                  <summary>
-                    <div class="flex items-center gap-2">
-                      Footwear
-                      <img
-                        class="w-4 h-4"
-                        src="./assets/images/icons/shoes.svg"
-                        alt="productPicture"
-                      />
-                    </div>
-                  </summary>
-                </details>
-              </div>
-              <div class="border-b pb-3 text-lg text-gray-600">
-                <details>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Earrings</a>
-                    <span>300</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Couple Rings</a>
-                    <span>30</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Necklace</a>
-                    <span>50</span>
-                  </div>
-                  <summary>
-                    <div class="flex items-center gap-2">
-                      Jewelry
-                      <img
-                        class="w-4 h-4"
-                        src="./assets/images/icons/jewelry.svg"
-                        alt="productPicture"
-                      />
-                    </div>
-                  </summary>
-                </details>
-              </div>
-              <div class="border-b pb-3 text-lg text-gray-600">
-                <details>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Clothes Perfume</a>
-                    <span>300</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Deodorant</a>
-                    <span>30</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Jacket</a>
-                    <span>50</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Dress & Frock</a>
-                    <span>120</span>
-                  </div>
-                  <summary>
-                    <div class="flex items-center gap-2">
-                      Perfume
-                      <img
-                        class="w-4 h-4"
-                        src="./assets/images/icons/perfume.svg"
-                        alt="productPicture"
-                      />
-                    </div>
-                  </summary>
-                </details>
-              </div>
-              <div class="border-b pb-3 text-lg text-gray-600">
-                <details>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Shampoo</a>
-                    <span>300</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Sunscreen</a>
-                    <span>30</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Body Wash</a>
-                    <span>50</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Makeup Kit</a>
-                    <span>120</span>
-                  </div>
-                  <summary>
-                    <div class="flex items-center gap-2">
-                      Cosmetics
-                      <img
-                        class="w-4 h-4"
-                        src="./assets/images/icons/cosmetics.svg"
-                        alt="productPicture"
-                      />
-                    </div>
-                  </summary>
-                </details>
-              </div>
-              <div class="border-b pb-3 text-lg text-gray-600">
-                <details>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Sunglasses</a>
-                    <span>23</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Lenses</a>
-                    <span>53</span>
-                  </div>
-                  <summary>
-                    <div class="flex items-center gap-2">
-                      Glasses
-                      <img
-                        class="w-4 h-4"
-                        src="./assets/images/icons/glasses.svg"
-                        alt="productPicture"
-                      />
-                    </div>
-                  </summary>
-                </details>
-              </div>
-              <div class="border-b pb-3 text-lg text-gray-600">
-                <details>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Wallet</a>
-                    <span>300</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Purse</a>
-                    <span>30</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Gym Backpack</a>
-                    <span>50</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Shopping Bag</a>
-                    <span>120</span>
-                  </div>
-                  <summary>
-                    <div class="flex items-center gap-2">
-                      Bags
-                      <img
-                        class="w-4 h-4"
-                        src="./assets/images/icons/bag.svg"
-                        alt="productPicture"
-                      />
-                    </div>
-                  </summary>
-                </details>
-              </div>
-            </div>
-
-            <div
-              class="bestsellers 2-72 h-auto mt-10 flex flex-col items-start justify-start gap-4"
-            >
-              <h2 class="text-lg font-semibold">BEST SELLERS</h2>
-              <div class="flex items-center justify-start gap-2">
-                <div
-                  class="w-20 h-20 p-2 border shadow-lg bg-gray-300/20 rounded-md"
-                >
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="text-gray-900">Baby Fabric Shoes</h4>
-                  <div class="stars text-yellow-500">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-half-outline"></ion-icon>
-                  </div>
-                  <div class="flex items-center justify-start gap-4">
-                    <s class="text-gray-500">$14.00</s> <strong>$7.00</strong>
-                  </div>
-                </div>
-              </div>
-              <div class="flex items-center justify-start gap-2">
-                <div
-                  class="w-20 h-20 p-2 border shadow-lg bg-gray-300/20 rounded-md"
-                >
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/2.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="text-gray-900">Men's Hoodies T-Shirt</h4>
-                  <div class="stars text-yellow-500">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-half-outline"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                  </div>
-                  <div class="flex items-center justify-start gap-4">
-                    <s class="text-gray-500">$5.00</s> <strong>$2.00</strong>
-                  </div>
-                </div>
-              </div>
-              <div class="flex items-center justify-start gap-2">
-                <div
-                  class="w-20 h-20 p-2 border shadow-lg bg-gray-300/20 rounded-md"
-                >
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/3.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="text-gray-900">Girls T-Shirt</h4>
-                  <div class="stars text-yellow-500">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-half-outline"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                  </div>
-                  <div class="flex items-center justify-start gap-4">
-                    <s class="text-gray-500">$10.00</s> <strong>$5.00</strong>
-                  </div>
-                </div>
-              </div>
-              <div class="flex items-center justify-start gap-2">
-                <div
-                  class="w-20 h-20 p-2 border shadow-lg bg-gray-300/20 rounded-md"
-                >
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/4.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="text-gray-900">Woolen Hat For Men</h4>
-                  <div class="stars text-yellow-500">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-half-outline"></ion-icon>
-                  </div>
-                  <div class="flex items-center justify-start gap-4">
-                    <s class="text-gray-500">$24.00</s> <strong>$17.00</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </aside>
-
-        <div class="products w-full lg:w-3/4 flex flex-col">
-          <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="NewArrivals flex flex-col gap-4">
-              <h1 class="text-xl font-semibold border-b pb-4">New Arrivals</h1>
-
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm text-sm">
-                    Relaxed Short Full...
-                  </h4>
-                  <h4>Clothes</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$7.00</strong>
-                    <s class="text-gray-500">$14.00</s>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-2.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm text-sm">
-                    Girls Pnk Embro Desi...
-                  </h4>
-                  <h4>Clothes</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$21.00</strong>
-                    <s class="text-gray-500">$24.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-3.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm text-sm">
-                    Black Floral Wrap...
-                  </h4>
-                  <h4>Clothes</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$5.00</strong>
-                    <s class="text-gray-500">$15.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/shirt-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm text-sm">
-                    Pure Garment Dye...
-                  </h4>
-                  <h4>Mens Fashion</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$30.00</strong>
-                    <s class="text-gray-500">$40.00</s>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="Trending flex flex-col gap-4">
-              <h1 class="text-xl font-semibold border-b pb-4">Trending</h1>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/sports-5.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm text-sm">
-                    Running & Trekking...
-                  </h4>
-                  <h4>Sports</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$82.00</strong>
-                    <s class="text-gray-500">$101.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/sports-2.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm">
-                    Trekking & Running...
-                  </h4>
-                  <h4>Sports</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$78.00</strong>
-                    <s class="text-gray-500">$93.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/party-wear-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm">
-                    Womens Party Wea...
-                  </h4>
-                  <h4>Party Wear</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$27.00</strong>
-                    <s class="text-gray-500">$32.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/sports-3.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm">
-                    Sports Claw Women...
-                  </h4>
-                  <h4>Sports</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$12.00</strong>
-                    <s class="text-gray-500">$24.00</s>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="TopRated flex flex-col gap-4">
-              <h1 class="text-xl font-semibold border-b pb-4">Top Rated</h1>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/watch-3.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm">
-                    Pocket Watch Leather...
-                  </h4>
-                  <h4>Watches</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$32.00</strong>
-                    <s class="text-gray-500">$53.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/jewellery-3.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm">
-                    Silver Deer Heart Neck...
-                  </h4>
-                  <h4>Jewellery</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$12.00</strong>
-                    <s class="text-gray-500">$32.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/perfume.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm">
-                    Titan 100 Ml Womens
-                  </h4>
-                  <h4>Perfume</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$74.00</strong>
-                    <s class="text-gray-500">$104.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/belt.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm">
-                    Men's Leather Rever...
-                  </h4>
-                  <h4>Belt</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$17.00</strong>
-                    <s class="text-gray-500">$23.00</s>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="day my-10">
-            <h1 class="font-semibold text-xl border-b py-4">Deal Of The Day</h1>
-            <div
-              class="mt-10 w-full h-auto border rounded-lg flex flex-col lg:flex-row justify-between"
-            >
-              <img
-                class="lg:w-1/2"
-                src="./assets/images/products/shampoo.jpg"
-                alt=""
-              />
-              <div class="lg:w-1/2 flex flex-col items-start gap-2 p-4">
-                <div class="stars text-yellow-500">
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star-half-outline"></ion-icon>
-                </div>
-                <h4 class="font-bold text-lg">
-                  SHAMPOO, CONDITIONER & FACEWASH PACKS
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit
-                  amet consectetur Lorem ipsum dolor
-                </p>
-                <div>
-                  <strong class="text-red-400 font-bold text-xl">$150.00</strong>
-                  <s class="text-xl text-gray-500">$200.00</s>
-                </div>
-                <button
-                  class="bg-red-500 text-white rounded-xl py-2 px-4 text-md font-semibold"
-                >
-                  ADD TO CART
-                </button>
-                <h3 class="mt-4 font-semibold text-sm">HURRY UP! OFFER ENDS IN:</h3>
-                <div
-                  id="reverseTimer"
-                  class="flex justify-between items-center gap-4 font-semibold text-sm text-black"
-                >
-                  <h1
-                    class="flex flex-col items-center justify-center bg-gray-300/20 border shadow-lg p-2 w-12 h-12 rounded-lg"
-                    id="days"
-                  ></h1>
-                  <h1
-                    class="flex flex-col items-center justify-center bg-gray-300/20 border shadow-lg p-2 w-12 h-12 rounded-lg"
-                    id="hour"
-                  ></h1>
-                  <h1
-                    class="flex flex-col items-center justify-center bg-gray-300/20 border shadow-lg p-2 w-12 h-12 rounded-lg"
-                    id="minute"
-                  ></h1>
-                  <h1
-                    class="flex flex-col items-center justify-center bg-gray-300/20 border shadow-lg p-2 w-12 h-12 rounded-lg"
-                    id="second"
-                  ></h1>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="newProductsContainer">
-            <h1 class="font-semibold text-xl border-b py-4">New Products</h1>
-            <div
-              id="newProducts"
-              class="newProducts grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-            ></div>
-          </div>
-        </div>
-      </section>
+      <div id="overlayNavbar" class="hidden fixed top-0 left-0 w-screen h-screen bg-gray-500/30 z-10"></div>
 
       <div
-        class="mt-10 w-full px-8 lg:px-0 lg:w-5/6 mx-auto flex flex-wrap lg:flex-nowrap flex-col lg:flex-row gap-8 mb-20"
-      >
-        <div class="testimonial w-full lg:w-2/6">
-          <h1 class="text-xl font-semibold border-b pb-4 mb-8">Testimonial</h1>
-          <div
-            style="height: 23rem"
-            class="w-full border rounded-xl flex flex-col items-center justify-center p-4"
-          >
-            <img
-              class="w-20 h-20 rounded-full"
-              src="./assets/images/testimonial-1.jpg"
-              alt="testimonial"
-            />
-            <h2 class="text-lg font-bold text-gray-600">ALAN DOE</h2>
-            <h5 class="text-md">CEO & Founder Invision</h5>
-            <img
-              class="w-6 h-6 my-4"
-              src="./assets/images/icons/quotes.svg"
-              alt="quotes"
-            />
-            <p class="text-sm w-4/5 mx-auto text-center">
-              Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit
-              amet.
+        class="fixed top-0 w-80 h-screen bg-white p-4 shadow-lg hidden flex-col justify-start gap-4 text-lg font-semibold overflow-auto z-20"
+        id="sidebarNavbar">
+        <div class="flex justify-between border-b-2 py-4">
+          <h3 class="text-gray-900 font-bold">Menu</h3>
+          <button type="button" class="closeButton hover:text-indigo-600">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </button>
+        </div>
+
+        <a href="./index.html"
+          class="flex font-bold flex items-center gap-2 mb-2 text-gray-700 hover:text-indigo-600 transition-colors">
+          <ion-icon name="home-outline" class="text-2xl"></ion-icon>
+          Home
+        </a>
+
+        <ul id="mobileNavbarUl">
+          <li class="nav_items relative nav_item_tarieven flex items-center gap-2 mb-2 group"
+            style="cursor:pointer;padding:0;">
+            <a href="./tarieven.html"
+              class="flex items-center gap-2 w-full h-full text-gray-700 font-semibold underline-offset-4"
+              style="width:100%;height:100%;">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100">
+                <ion-icon name="pricetags-outline" class="text-sm text-indigo-600"></ion-icon>
+              </span>
+              Tarieven
+            </a>
+          </li>
+
+          <li class="nav_items relative wonav_item_tarieven flex items-center gap-2 mb-2 group"
+            style="cursor:pointer;padding:0;">
+            <a href="./werkwijze.html"
+              class="flex items-center gap-2 w-full h-full text-gray-700 font-semibold underline-offset-4"
+              style="width:100%;height:100%;">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-green-100">
+                <ion-icon name="construct-outline" class="text-lg text-green-600"></ion-icon>
+              </span>
+              Werkwijze
+            </a>
+          </li>
+
+          <li class="nav_items relative nav_item_contact flex items-center gap-2 mb-2 group"
+            style="cursor:pointer;padding:0;">
+            <a href="./contact.html"
+              class="flex items-center gap-2 w-full h-full text-gray-700 font-semibold underline-offset-4"
+              style="width:100%;height:100%;">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100">
+                <ion-icon name="mail-outline" class="text-lg text-yellow-600"></ion-icon>
+              </span>
+              Contact
+            </a>
+          </li>
+
+          <li class="nav_items relative nav_item_overons flex items-center gap-2 group"
+            style="cursor:pointer;padding:0;">
+            <a href="./overons.html"
+              class="flex items-center gap-2 w-full h-full text-gray-700 font-semibold underline-offset-4"
+              style="width:100%;height:100%;">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-pink-100">
+                <ion-icon name="people-outline" class="text-lg text-pink-600"></ion-icon>
+              </span>
+              Over ons
+            </a>
+          </li>
+        </ul>
+
+        <div class="border-b"></div>
+
+        <!-- Diensten dropdown -->
+        <div class="relative mb-4">
+          <button type="button" id="dienstenDropdownBtn"
+            class="w-full flex justify-between items-center pb-3 text-gray-600 font-bold focus:outline-none">
+            <span>
+              <div class="font-bold flex items-center gap-2 mb-2">
+                <span
+                  class="inline-flex items-center justify-center gap-2 text-gray-700 hover:text-indigo-600 transition-colors">
+                  <ion-icon name="apps-outline" class="text-xl"></ion-icon>
+                </span>
+                <h3>Diensten</h3>
+              </div>
+            </span>
+            <svg id="dienstenDropdownIcon" class="w-4 h-4 ml-2 transition-transform duration-200" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div id="dienstenDropdownMenu" class="hidden flex-col gap-1 mt-2">
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100">
+                <ion-icon name="phone-portrait-outline" class="text-indigo-600 text-lg"></ion-icon>
+              </span>
+              <a href="./telefoon-mobile-apps.html">Telefoon - Mobiel - APP</a>
+            </div>
+
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100">
+                <ion-icon name="laptop-outline" class="text-blue-600 text-lg"></ion-icon>
+              </span>
+              <a href="./computer-laptop.html">Computer - Laptop</a>
+            </div>
+
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-pink-100">
+                <ion-icon name="tablet-portrait-outline" class="text-pink-600 text-lg"></ion-icon>
+              </span>
+              <a href="./tablet-ipad.html">Tablet - Apple IPAD</a>
+            </div>
+
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-green-100">
+                <ion-icon name="wifi-outline" class="text-green-600 text-lg"></ion-icon>
+              </span>
+              <a href="./internet-email-thuisnetwerk-wifi.html">Internet - Email</a>
+            </div>
+
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100">
+                <ion-icon name="print-outline" class="text-yellow-600 text-lg"></ion-icon>
+              </span>
+              <a href="./printer-scanner.html">Printer - Scanner</a>
+            </div>
+
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100">
+                <ion-icon name="globe-outline" class="text-purple-600 text-lg"></ion-icon>
+              </span>
+              <a href="./websitebouwen.html">Webdesign</a>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('dienstenDropdownBtn');
+            const menu = document.getElementById('dienstenDropdownMenu');
+            const icon = document.getElementById('dienstenDropdownIcon');
+            btn.addEventListener('click', function () {
+              menu.classList.toggle('hidden');
+              icon.classList.toggle('rotate-180');
+            });
+          });
+        </script>
+      </div>
+
+      <div id="sidebarCategories"
+        class="fixed top-0 w-80 h-screen bg-white p-6 shadow-lg hidden flex-col justify-start gap-4 font-semibold overflow-auto z-20">
+        <div class="w-full flex items-center justify-between">
+          <button type="button" class="closeButton text-xl hover:text-indigo-600">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- mobile Navbar end -->
+  </header>
+
+  <main>
+    <!-- Hero Section (Geoptimaliseerde verticale spacing & Scroll Cue) -->
+    <div class="relative isolate px-4 pt-6 pb-6 sm:pt-8 sm:pb-8 lg:pt-8 lg:pb-10 lg:px-8 flex flex-col items-center justify-center">
+      <!-- Content -->
+      <div class="max-w-2xl lg:max-w-xl mx-auto text-center lg:text-left">
+        <!-- Top 10 UX: Live Status & Spoedhulp Badges (Punt 2 & 8) -->
+        <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-2.5">
+          <div id="heroLiveStatus" class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 shadow-xs">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span id="heroLiveStatusText">Nu geopend & bereikbaar voor IT-hulp</span>
+          </div>
+          <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200">
+            ⚡ Spoedhulp vandaag nog
+          </span>
+        </div>
+
+        <!-- SEO: 1 H1 -->
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-2.5 tracking-tight">
+          IT Support & Computerhulp in Zuid-Holland
+        </h1>
+
+        <!-- Top 10 UX: Empathische Subtitel (Punt 1) -->
+        <p class="text-base sm:text-lg font-medium text-gray-700 leading-relaxed">
+          Geen stress: wij lossen uw computer-, WiFi- of printerprobleem vandaag nog rustig voor u op.
+          Aan huis in Zuid-Holland (o.a. Rotterdam, Spijkenisse, Hoogvliet) of direct op afstand.
+        </p>
+
+        <!-- Top 10 UX: Zonder Vaktermen Belofte (Punt 4) -->
+        <ul class="mt-3.5 text-sm sm:text-base text-gray-800 flex flex-col gap-1.5">
+          <li class="flex items-center gap-2 justify-center lg:justify-start">
+            <ion-icon name="checkmark-circle" class="text-emerald-600 text-lg shrink-0"></ion-icon>
+            <span><strong>Rustige uitleg in gewone mensentaal</strong> — gegarandeerd zonder moeilijk vakjargon</span>
+          </li>
+          <li class="flex items-center gap-2 justify-center lg:justify-start">
+            <ion-icon name="checkmark-circle" class="text-emerald-600 text-lg shrink-0"></ion-icon>
+            <span><strong>Heldere tarieven</strong> vooraf afgesproken, geen verrassingen achteraf</span>
+          </li>
+          <li class="flex items-center gap-2 justify-center lg:justify-start">
+            <ion-icon name="checkmark-circle" class="text-emerald-600 text-lg shrink-0"></ion-icon>
+            <span><strong>7 dagen per week bereikbaar</strong> voor particulieren, senioren en ZZP</span>
+          </li>
+        </ul>
+
+        <!-- Primary CTA Buttons -->
+        <div class="mt-5 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+          <a href="tel:+31686427359" data-event="call-click" aria-label="Bel Techuis ICT"
+            class="rounded-xl bg-indigo-600 shadow-lg shadow-indigo-500/20 px-4 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 active:scale-98 transition-all duration-200 flex items-center justify-center gap-1.5">
+            <ion-icon name="call-outline"></ion-icon> Bel direct: 06 - 86 42 73 59
+          </a>
+
+          <a href="https://wa.me/31686427359?text=Hoi%20Techuis%2C%20ik%20heb%20hulp%20nodig%20met..." data-event="whatsapp-click"
+            aria-label="WhatsApp Techuis ICT"
+            class="rounded-xl bg-green-500 shadow-lg shadow-green-400/20 px-4 py-2.5 text-sm font-semibold text-white hover:bg-green-600 active:scale-98 transition-all duration-200 flex items-center justify-center gap-1.5">
+            <ion-icon name="logo-whatsapp"></ion-icon> WhatsApp
+          </a>
+
+          <a href="./contact.html"
+            class="rounded-xl bg-white border border-gray-300 px-4 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-50 active:scale-98 transition-all duration-200 flex items-center justify-center">
+            Afspraak maken
+          </a>
+        </div>
+
+        <!-- Idee 3: Snelkeuze Chips (Directe Springplank) -->
+        <div class="mt-3.5 flex flex-wrap items-center justify-center lg:justify-start gap-1.5 text-xs text-gray-600">
+          <span class="text-gray-400 font-medium mr-0.5">Direct naar:</span>
+          <a href="#keuzehulp" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 text-slate-700 transition-colors border border-slate-200/80">
+            <ion-icon name="laptop-outline" class="text-indigo-600 text-xs"></ion-icon>
+            <span>Laptop traag</span>
+          </a>
+          <a href="#keuzehulp" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 text-slate-700 transition-colors border border-slate-200/80">
+            <ion-icon name="wifi-outline" class="text-indigo-600 text-xs"></ion-icon>
+            <span>WiFi storing</span>
+          </a>
+          <a href="#keuzehulp" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 text-slate-700 transition-colors border border-slate-200/80">
+            <ion-icon name="print-outline" class="text-indigo-600 text-xs"></ion-icon>
+            <span>Printer</span>
+          </a>
+          <a href="#postcode-checker" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 text-slate-700 transition-colors border border-slate-200/80">
+            <ion-icon name="location-outline" class="text-emerald-600 text-xs"></ion-icon>
+            <span>Regiocheck</span>
+          </a>
+          <a href="./tarieven.html" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 text-slate-700 transition-colors border border-slate-200/80">
+            <ion-icon name="pricetag-outline" class="text-indigo-600 text-xs"></ion-icon>
+            <span>Tarieven</span>
+          </a>
+        </div>
+
+        <!-- Top 10 UX: No Cure, No Pay Micro-badge (Punt 6) -->
+        <div class="mt-3 flex items-center justify-center lg:justify-start gap-2 text-xs font-semibold text-gray-600">
+          <ion-icon name="shield-checkmark" class="text-indigo-600 text-base shrink-0"></ion-icon>
+          <span>No Cure, No Pay garantie bij eerste diagnose</span>
+          <span class="text-gray-300">•</span>
+          <span>Veilig achteraf pinnen</span>
+        </div>
+      </div>
+
+      <!-- Idee 2: Subtiele Geanimeerde Scroll Cue -->
+      <div class="mt-6 flex justify-center w-full">
+        <a href="#keuzehulp" class="inline-flex flex-col items-center gap-1 text-gray-400 hover:text-indigo-600 transition-colors group cursor-pointer" aria-label="Scroll naar probleemoplosser">
+          <span class="text-[11px] font-semibold tracking-wider uppercase text-gray-500 group-hover:text-indigo-600 transition-colors">
+            Bekijk onze hulp &amp; situaties
+          </span>
+          <div class="w-5 h-8 rounded-full border-2 border-gray-300 group-hover:border-indigo-500 flex items-start justify-center p-1 transition-colors">
+            <div class="w-1.5 h-2 rounded-full bg-indigo-600 animate-bounce"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Background Blob -->
+    <div
+      class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+      aria-hidden="true">
+      <div
+        class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-indigo-500/20 to-emerald-400/20 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+      </div>
+    </div>
+
+
+    <!-- Keuzehulp (Probleemoplosser) - Idee 4: Zachte achtergrondovergang & visueel diepteverschil -->
+    <section id="keuzehulp" class="py-12 sm:py-16 border-t border-slate-200/80 bg-gradient-to-b from-slate-50/70 via-slate-50/40 to-white relative" aria-label="Directe Keuzehulp">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-semibold tracking-wide uppercase mb-3">
+          <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
+          Directe Probleemoplosser
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+          Waarmee kunnen we u direct helpen?
+        </h2>
+        <p class="text-sm sm:text-base text-gray-600 mt-2 max-w-xl mx-auto">
+          Klik op uw situatie voor gerichte ondersteuning bij u aan huis of direct op afstand.
+        </p>
+      </div>
+
+      <!-- 4 Probleemkaarten met een rustige, uniforme merkstijl en royale witruimte -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7 mt-10 items-stretch">
+        <!-- Card 1: Laptop/PC -->
+        <a href="./computer-laptop.html"
+          class="group relative bg-white rounded-2xl p-7 sm:p-8 border border-gray-200/90 shadow-xs hover:shadow-xl hover:border-indigo-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
+          <div class="flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 shadow-xs">
+                <ion-icon name="laptop-outline"></ion-icon>
+              </div>
+              <span class="text-[11px] font-semibold tracking-wide uppercase px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200/80 text-slate-600 group-hover:border-indigo-200 group-hover:text-indigo-600 transition-colors">
+                Hardware &amp; PC
+              </span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg group-hover:text-indigo-600 transition-colors tracking-tight min-h-[3.25rem] flex items-center">
+              Laptop of PC traag
+            </h3>
+            <p class="text-sm text-gray-600 mt-2.5 leading-relaxed flex-1 min-h-[4.25rem]">
+              Start niet op, virussen, foutmeldingen of trage werking vakkundig en snel verholpen.
             </p>
           </div>
-        </div>
+          <div class="mt-7 pt-4 border-t border-gray-100 flex items-center justify-between text-sm font-semibold text-indigo-600 group-hover:text-indigo-700">
+            <span>Bekijk computerhulp</span>
+            <span class="w-7 h-7 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-all duration-200">
+              <ion-icon name="arrow-forward-outline" class="text-sm group-hover:translate-x-0.5 transition-transform duration-200"></ion-icon>
+            </span>
+          </div>
+        </a>
 
-        <div
-          class="w-full lg:w-3/6 rounded-lg flex items-center justify-center"
-          style="background-image: url('./assets/images/cta-banner.jpg')"
-        >
-          <div
-            class="flex flex-col items-center justify-center p-8 gap-4 bg-gray-100/70 rounded-lg w-3/4"
-          >
-            <button class="bg-gray-900 text-white p-2 rounded-lg">
-              25% DISCOUNT
+        <!-- Card 2: WiFi & Netwerk -->
+        <a href="./internet-email-thuisnetwerk-wifi.html"
+          class="group relative bg-white rounded-2xl p-7 sm:p-8 border border-gray-200/90 shadow-xs hover:shadow-xl hover:border-indigo-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
+          <div class="flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 shadow-xs">
+                <ion-icon name="wifi-outline"></ion-icon>
+              </div>
+              <span class="text-[11px] font-semibold tracking-wide uppercase px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200/80 text-slate-600 group-hover:border-indigo-200 group-hover:text-indigo-600 transition-colors">
+                WiFi &amp; Netwerk
+              </span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg group-hover:text-indigo-600 transition-colors tracking-tight min-h-[3.25rem] flex items-center">
+              WiFi &amp; internet storing
+            </h3>
+            <p class="text-sm text-gray-600 mt-2.5 leading-relaxed flex-1 min-h-[4.25rem]">
+              Geen internet, haperend bereik op zolder of in de tuin, modem &amp; router installatie.
+            </p>
+          </div>
+          <div class="mt-7 pt-4 border-t border-gray-100 flex items-center justify-between text-sm font-semibold text-indigo-600 group-hover:text-indigo-700">
+            <span>Bekijk WiFi hulp</span>
+            <span class="w-7 h-7 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-all duration-200">
+              <ion-icon name="arrow-forward-outline" class="text-sm group-hover:translate-x-0.5 transition-transform duration-200"></ion-icon>
+            </span>
+          </div>
+        </a>
+
+        <!-- Card 3: Printer -->
+        <a href="./printer-scanner.html"
+          class="group relative bg-white rounded-2xl p-7 sm:p-8 border border-gray-200/90 shadow-xs hover:shadow-xl hover:border-indigo-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
+          <div class="flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 shadow-xs">
+                <ion-icon name="print-outline"></ion-icon>
+              </div>
+              <span class="text-[11px] font-semibold tracking-wide uppercase px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200/80 text-slate-600 group-hover:border-indigo-200 group-hover:text-indigo-600 transition-colors">
+                Print &amp; Scan
+              </span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg group-hover:text-indigo-600 transition-colors tracking-tight min-h-[3.25rem] flex items-center">
+              Printer weigert dienst
+            </h3>
+            <p class="text-sm text-gray-600 mt-2.5 leading-relaxed flex-1 min-h-[4.25rem]">
+              Printer offline, draadloos printen weigert, scanner aansluiten of strepen op papier.
+            </p>
+          </div>
+          <div class="mt-7 pt-4 border-t border-gray-100 flex items-center justify-between text-sm font-semibold text-indigo-600 group-hover:text-indigo-700">
+            <span>Bekijk printer hulp</span>
+            <span class="w-7 h-7 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-all duration-200">
+              <ion-icon name="arrow-forward-outline" class="text-sm group-hover:translate-x-0.5 transition-transform duration-200"></ion-icon>
+            </span>
+          </div>
+        </a>
+
+        <!-- Card 4: Email / Smartphone -->
+        <a href="./telefoon-mobile-apps.html"
+          class="group relative bg-white rounded-2xl p-7 sm:p-8 border border-gray-200/90 shadow-xs hover:shadow-xl hover:border-indigo-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
+          <div class="flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 shadow-xs">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+              <span class="text-[11px] font-semibold tracking-wide uppercase px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200/80 text-slate-600 group-hover:border-indigo-200 group-hover:text-indigo-600 transition-colors">
+                Mobiel &amp; Mail
+              </span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg group-hover:text-indigo-600 transition-colors tracking-tight min-h-[3.25rem] flex items-center">
+              E-mail, mobiel &amp; tablet
+            </h3>
+            <p class="text-sm text-gray-600 mt-2.5 leading-relaxed flex-1 min-h-[4.25rem]">
+              Wachtwoord vergeten, mail instellen op telefoon of tablet, DigiD en veilige back-ups.
+            </p>
+          </div>
+          <div class="mt-7 pt-4 border-t border-gray-100 flex items-center justify-between text-sm font-semibold text-indigo-600 group-hover:text-indigo-700">
+            <span>Bekijk mobiel &amp; mail</span>
+            <span class="w-7 h-7 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-all duration-200">
+              <ion-icon name="arrow-forward-outline" class="text-sm group-hover:translate-x-0.5 transition-transform duration-200"></ion-icon>
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Zelfstandige, evenwichtige Postcode- & Regiochecker Strook -->
+      <div id="postcode-checker" class="mt-10 bg-slate-50 border border-slate-200/90 rounded-2xl p-6 sm:p-7 max-w-4xl mx-auto shadow-xs">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-5">
+          <div class="flex items-center gap-4 text-center md:text-left">
+            <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center text-2xl shrink-0 shadow-md shadow-indigo-600/20">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div>
+              <h4 class="text-base sm:text-lg font-bold text-gray-900">Helpen jullie ook bij mij aan huis?</h4>
+              <p class="text-xs sm:text-sm text-gray-600 mt-0.5">Voer uw 4-cijferige postcode in voor directe regio-controle in Zuid-Holland:</p>
+            </div>
+          </div>
+          <div class="w-full md:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
+            <div class="relative">
+              <input type="text" id="home-postcode-input" placeholder="Bijv. 3079 of 3201" maxlength="6"
+                inputmode="numeric" pattern="[0-9]*" autocomplete="postal-code"
+                class="w-full sm:w-44 px-4 py-2.5 text-base sm:text-sm bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 shadow-2xs font-medium">
+            </div>
+            <button type="button" onclick="checkHomePostcode()"
+              class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 active:scale-98 text-white text-sm font-semibold rounded-xl shadow-md shadow-indigo-600/20 transition-all flex items-center justify-center gap-1.5 shrink-0">
+              <span>Check regio</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
             </button>
-            <h1 class="w-56 text-4xl font-bold text-center text-gray-800">
-              Summer Collection
-            </h1>
-            <h5 class="text-lg font-semibold text-gray-500">Starting @ $10</h5>
-            <button class="text-lg font-semibold text-gray-500">SHOP NOW</button>
           </div>
         </div>
+        <div id="home-postcode-feedback" class="hidden mt-4 text-xs sm:text-sm font-semibold rounded-xl p-3.5"></div>
+      </div>
 
-        <div class="OurServices w-full lg:w-2/6">
-          <h1 class="text-xl font-semibold border-b pb-4 mb-8">Our Services</h1>
-          <div
-            style="height: 23rem"
-            class="w-full border rounded-xl flex flex-wrap justify-between lg:flex-col items-center lg:justify-center p-4 lg:px-8 lg:gap-8"
-          >
-            <div
-              class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2"
-            >
-              <ion-icon class="text-red-500 text-4xl" name="boat-outline"></ion-icon>
-              <div>
-                <h3 class="font-semibold text-gray-700">Worldwide Delivery</h3>
-                <p class="text-xs text-gray-600">For Order Over $100</p>
+      <!-- Professionele Trust Strip (Merken & Providers zonder kinderlijke emoji's) -->
+      <div class="mt-8 text-center">
+        <p class="text-xs font-semibold text-gray-500 tracking-wider uppercase mb-3">
+          Ondersteuning voor alle gangbare merken & providers
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-gray-200 text-xs font-semibold text-gray-700 shadow-2xs">
+            <ion-icon name="logo-windows" class="text-indigo-600 text-sm"></ion-icon>
+            <span>Windows 11 / 10</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-gray-200 text-xs font-semibold text-gray-700 shadow-2xs">
+            <ion-icon name="logo-apple" class="text-gray-900 text-sm"></ion-icon>
+            <span>Apple (Mac & iPad)</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-gray-200 text-xs font-semibold text-gray-700 shadow-2xs">
+            <ion-icon name="print-outline" class="text-indigo-600 text-sm"></ion-icon>
+            <span>HP, Canon, Epson & Brother</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-gray-200 text-xs font-semibold text-gray-700 shadow-2xs">
+            <ion-icon name="wifi-outline" class="text-emerald-600 text-sm"></ion-icon>
+            <span>Ziggo, KPN & Odido</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-gray-200 text-xs font-semibold text-gray-700 shadow-2xs">
+            <ion-icon name="logo-android" class="text-emerald-600 text-sm"></ion-icon>
+            <span>Android, Samsung & Google</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- 1-2-3 Stappenplan ("Zo eenvoudig werkt het") - Moderne Horizontale Tijdlijn -->
+    <section class="py-14 sm:py-20 bg-slate-50 border-y border-slate-200/80 mb-8 overflow-hidden" aria-label="Werkwijze stappenplan">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-xs font-semibold text-indigo-700 tracking-wide uppercase mb-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
+            Helder & Frictieloos
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">
+            Zo eenvoudig werkt het:
+          </h2>
+          <p class="text-sm sm:text-base text-gray-600 mt-2.5 max-w-xl mx-auto">
+            In 3 ontspannen stappen van computerstress naar een werkende oplossing aan huis of op afstand.
+          </p>
+        </div>
+
+        <!-- Horizontale Tijdlijn op Desktop / Rustige Cards op Mobiel -->
+        <div class="relative">
+          <!-- Horizontale verbindingslijn op desktop (md+) -->
+          <div class="hidden md:block absolute top-7 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-indigo-200 via-indigo-400 to-indigo-200 z-0"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-10 relative z-10">
+            <!-- Stap 1 -->
+            <div class="relative flex flex-col items-center md:items-start text-center md:text-left bg-white md:bg-transparent p-6 md:p-0 rounded-2xl border md:border-0 border-slate-200/80 shadow-xs md:shadow-none">
+              <div class="w-14 h-14 rounded-2xl bg-indigo-600 text-white font-black text-xl flex items-center justify-center shadow-lg shadow-indigo-600/30 ring-4 ring-white mb-5 shrink-0 transition-transform hover:scale-105">
+                1
+              </div>
+              <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-1">Stap 1 • Direct contact</span>
+              <h3 class="text-lg sm:text-xl font-bold text-gray-900">Bel of stuur een appje</h3>
+              <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                Vertel kort wat er aan de hand is in uw eigen woorden. Geen technische termen nodig; u krijgt meteen rustig advies en een heldere prijsindicatie.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-100 w-full flex items-center justify-center md:justify-start gap-1.5 text-xs font-semibold text-indigo-600">
+                <ion-icon name="call-outline" class="text-base"></ion-icon>
+                <span>06 - 86 42 73 59 • 7 dagen per week</span>
               </div>
             </div>
 
-            <div
-              class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2"
-            >
-              <ion-icon
-                class="text-red-500 text-4xl"
-                name="rocket-outline"
-              ></ion-icon>
-              <div>
-                <h3 class="font-semibold text-gray-700">Worldwide Delivery</h3>
-                <p class="text-xs text-gray-600">For Order Over $100</p>
+            <!-- Stap 2 -->
+            <div class="relative flex flex-col items-center md:items-start text-center md:text-left bg-white md:bg-transparent p-6 md:p-0 rounded-2xl border md:border-0 border-slate-200/80 shadow-xs md:shadow-none">
+              <div class="w-14 h-14 rounded-2xl bg-indigo-600 text-white font-black text-xl flex items-center justify-center shadow-lg shadow-indigo-600/30 ring-4 ring-white mb-5 shrink-0 transition-transform hover:scale-105">
+                2
+              </div>
+              <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-1">Stap 2 • Hulp bij u thuis</span>
+              <h3 class="text-lg sm:text-xl font-bold text-gray-900">Aan huis of op afstand</h3>
+              <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                We plannen snel een moment dat u het beste schikt. Franklin komt persoonlijk bij u langs in Zuid-Holland of helpt u direct mee via een veilige verbinding.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-100 w-full flex items-center justify-center md:justify-start gap-1.5 text-xs font-semibold text-emerald-700">
+                <ion-icon name="checkmark-circle-outline" class="text-base text-emerald-600"></ion-icon>
+                <span>Rustige uitleg in gewone mensentaal</span>
               </div>
             </div>
 
-            <div
-              class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2"
-            >
-              <ion-icon class="text-red-500 text-4xl" name="call-outline"></ion-icon>
-              <div>
-                <h3 class="font-semibold text-gray-700">Worldwide Delivery</h3>
-                <p class="text-xs text-gray-600">For Order Over $100</p>
+            <!-- Stap 3 -->
+            <div class="relative flex flex-col items-center md:items-start text-center md:text-left bg-white md:bg-transparent p-6 md:p-0 rounded-2xl border md:border-0 border-slate-200/80 shadow-xs md:shadow-none">
+              <div class="w-14 h-14 rounded-2xl bg-emerald-600 text-white font-black text-xl flex items-center justify-center shadow-lg shadow-emerald-600/30 ring-4 ring-white mb-5 shrink-0 transition-transform hover:scale-105">
+                3
               </div>
-            </div>
-
-            <div
-              class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2"
-            >
-              <ion-icon
-                class="text-red-500 text-4xl"
-                name="arrow-undo-outline"
-              ></ion-icon>
-              <div>
-                <h3 class="font-semibold text-gray-700">Worldwide Delivery</h3>
-                <p class="text-xs text-gray-600">For Order Over $100</p>
-              </div>
-            </div>
-
-            <div
-              class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2"
-            >
-              <ion-icon
-                class="text-red-500 text-4xl"
-                name="ticket-outline"
-              ></ion-icon>
-              <div>
-                <h3 class="font-semibold text-gray-700">Worldwide Delivery</h3>
-                <p class="text-xs text-gray-600">For Order Over $100</p>
+              <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-1">Stap 3 • 100% tevreden</span>
+              <h3 class="text-lg sm:text-xl font-bold text-gray-900">Pas betalen als alles werkt</h3>
+              <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                Samen controleren we of uw computer, WiFi of printer weer vlekkeloos functioneert. Pas als u tevreden bent, rekent u veilig af via mobiele PIN of Tikkie.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-100 w-full flex items-center justify-center md:justify-start gap-1.5 text-xs font-semibold text-indigo-600">
+                <ion-icon name="card-outline" class="text-base"></ion-icon>
+                <span>Veilig pinnen aan de deur</span>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Trust Badges Bar met schone vector iconen (zonder OS-emojis) -->
+        <div class="mt-12 bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/80 shadow-xs flex flex-wrap items-center justify-around gap-4 text-xs font-semibold text-slate-700">
+          <div class="flex items-center gap-2">
+            <ion-icon name="card-outline" class="text-indigo-600 text-lg"></ion-icon>
+            <span>Mobiel pinnen aan huis</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <ion-icon name="phone-portrait-outline" class="text-indigo-600 text-lg"></ion-icon>
+            <span>iDEAL & Tikkie betaling</span>
+          </div>
+          <div class="flex items-center gap-2 text-emerald-800">
+            <ion-icon name="shield-checkmark-outline" class="text-emerald-600 text-lg"></ion-icon>
+            <span>No Cure, No Pay bij eerste diagnose</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <ion-icon name="receipt-outline" class="text-indigo-600 text-lg"></ion-icon>
+            <span>Officiële BTW-factuur voor ZZP</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Diensten Tegels -->
+    <section class="bg-white py-14 sm:py-20" id="Categories" aria-label="Onze diensten">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-xs font-semibold text-indigo-700 tracking-wide uppercase mb-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
+            Vakkundig & Betrouwbaar
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">
+            Onze IT Diensten in Zuid-Holland
+          </h2>
+          <p class="text-sm sm:text-base text-gray-600 mt-2.5 leading-relaxed">
+            Hulp nodig met uw computer, laptop, WiFi, printer, telefoon of website? Techuis ICT helpt particulieren, senioren en ZZP'ers aan huis of direct op afstand.
+          </p>
+        </div>
+
+        <!-- Wie Wij Zijn / Waarom Techuis Trust Strip -->
+        <div class="mb-12 max-w-3xl mx-auto bg-slate-50 border border-slate-200/90 rounded-2xl p-6 text-center shadow-xs">
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-700 uppercase tracking-wider mb-1">
+            <ion-icon name="shield-checkmark" class="text-sm text-indigo-600"></ion-icon>
+            Geduldig & Gecertificeerd
+          </div>
+          <h3 class="text-base sm:text-lg font-bold text-gray-900">Wie Wij Zijn</h3>
+          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mt-1">
+            Persoonlijke, geduldige IT-hulp zonder ingewikkeld vakjargon. We lossen uw computerprobleem vakkundig op én leggen het rustig aan u uit, zodat u het daarna zelf ook begrijpt.
+          </p>
+        </div>
+
+        <!-- 8 Symmetrische, Hoogwaardige Dienstenkaarten -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-7">
+          
+          <!-- Dienst 1: Computer & Laptop -->
+          <a href="./computer-laptop.html"
+            class="group bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl hover:border-indigo-400 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="overflow-hidden aspect-video bg-gray-100">
+                <img src="assets/images/laptop.jpg" alt="Computerhulp en laptop support in Zuid-Holland"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+              </div>
+              <div class="p-5">
+                <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Aan huis & afstand</span>
+                <h3 class="text-base font-bold text-gray-900 group-hover:text-indigo-600 transition-colors duration-300 mt-1">
+                  Computer & Laptop Hulp
+                </h3>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  Trage pc sneller maken, virussen verwijderen, Windows 11 updates, back-up en opschonen.
+                </p>
+              </div>
+            </div>
+            <div class="px-5 pb-5 pt-2 flex items-center text-xs font-bold text-indigo-600 gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Meer over computerhulp</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </a>
+
+          <!-- Dienst 2: WiFi & Netwerk -->
+          <a href="./internet-email-thuisnetwerk-wifi.html"
+            class="group bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl hover:border-indigo-400 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="overflow-hidden aspect-video bg-gray-100">
+                <img src="assets/images/email.jpg" width="400" height="225" alt="WiFi, internet en email ondersteuning in Zuid-Holland"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+              </div>
+              <div class="p-5">
+                <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Optimale verbinding</span>
+                <h3 class="text-base font-bold text-gray-900 group-hover:text-indigo-600 transition-colors duration-300 mt-1">
+                  WiFi & Thuisnetwerk
+                </h3>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  Slecht bereik op zolder of in de tuin verhelpen, modem & router installeren, stabiel internet.
+                </p>
+              </div>
+            </div>
+            <div class="px-5 pb-5 pt-2 flex items-center text-xs font-bold text-indigo-600 gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Meer over WiFi hulp</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </a>
+
+          <!-- Dienst 3: Printer & Scanner -->
+          <a href="./printer-scanner.html"
+            class="group bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl hover:border-indigo-400 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="overflow-hidden aspect-video bg-gray-100">
+                <img src="./assets/images/printer.jpg" alt="Printer en scanner installeren en problemen oplossen"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+              </div>
+              <div class="p-5">
+                <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Draadloos & USB</span>
+                <h3 class="text-base font-bold text-gray-900 group-hover:text-indigo-600 transition-colors duration-300 mt-1">
+                  Printer & Scanner
+                </h3>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  Printer offline meldingen, draadloos printen vanaf mobiel of pc, scanner instellen en koppelen.
+                </p>
+              </div>
+            </div>
+            <div class="px-5 pb-5 pt-2 flex items-center text-xs font-bold text-indigo-600 gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Meer over printer hulp</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </a>
+
+          <!-- Dienst 4: Telefoon & Apps -->
+          <a href="./telefoon-mobile-apps.html"
+            class="group bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl hover:border-indigo-400 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="overflow-hidden aspect-video bg-gray-100">
+                <img src="assets/images/mobile.jpg" alt="Telefoon, mobiel en apps instellen in Zuid-Holland"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+              </div>
+              <div class="p-5">
+                <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Smartphone & Data</span>
+                <h3 class="text-base font-bold text-gray-900 group-hover:text-indigo-600 transition-colors duration-300 mt-1">
+                  Telefoon & Mobiele Apps
+                </h3>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  Nieuwe telefoon inrichten, contacten & foto's overzetten, WhatsApp instellen en duidelijke uitleg.
+                </p>
+              </div>
+            </div>
+            <div class="px-5 pb-5 pt-2 flex items-center text-xs font-bold text-indigo-600 gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Meer over telefoonhulp</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </a>
+
+          <!-- Dienst 5: Tablet & iPad -->
+          <a href="./tablet-ipad.html"
+            class="group bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl hover:border-indigo-400 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="overflow-hidden aspect-video bg-gray-100">
+                <img src="assets/images/ipad.jpg" alt="Tablet en iPad hulp aan huis of op afstand"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 brightness-105" loading="lazy">
+              </div>
+              <div class="p-5">
+                <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Apple & Android</span>
+                <h3 class="text-base font-bold text-gray-900 group-hover:text-indigo-600 transition-colors duration-300 mt-1">
+                  Tablet & Apple iPad
+                </h3>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  iPad instellen, videobellen met kinderen/kleinkinderen, DigiD, e-mail en handige apps installeren.
+                </p>
+              </div>
+            </div>
+            <div class="px-5 pb-5 pt-2 flex items-center text-xs font-bold text-indigo-600 gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Meer over tablet hulp</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </a>
+
+          <!-- Dienst 6: Hulp op Afstand -->
+          <a href="./hulpopstand.html"
+            class="group bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl hover:border-indigo-400 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="overflow-hidden aspect-video bg-gray-100">
+                <img src="assets/images/electronics-banner-1.jpg" alt="Directe hulp op afstand via beveiligde verbinding"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+              </div>
+              <div class="p-5">
+                <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Direct online hulp</span>
+                <h3 class="text-base font-bold text-gray-900 group-hover:text-indigo-600 transition-colors duration-300 mt-1">
+                  Hulp op Afstand
+                </h3>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  Geen wachttijd: binnen enkele minuten kijken we veilig mee op uw scherm via TeamViewer.
+                </p>
+              </div>
+            </div>
+            <div class="px-5 pb-5 pt-2 flex items-center text-xs font-bold text-indigo-600 gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Direct op afstand helpen</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </a>
+
+          <!-- Dienst 7: Huishoudapparaten -->
+          <a href="./huishoudapparaten.html"
+            class="group bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl hover:border-indigo-400 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="overflow-hidden aspect-video bg-gray-100">
+                <img src="assets/images/tv.jpg" alt="Smart apparaten koppelen en installeren (Smart TV, deurbel, etc.)"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+              </div>
+              <div class="p-5">
+                <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Smart Home & TV</span>
+                <h3 class="text-base font-bold text-gray-900 group-hover:text-indigo-600 transition-colors duration-300 mt-1">
+                  Smart TV & Apparaten
+                </h3>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  Smart TV aansluiten, streamingdiensten instellen, slimme deurbel of thermostaat aan WiFi koppelen.
+                </p>
+              </div>
+            </div>
+            <div class="px-5 pb-5 pt-2 flex items-center text-xs font-bold text-indigo-600 gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Meer over smart apparaten</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </a>
+
+          <!-- Dienst 8: Website & Webdesign -->
+          <a href="./websitebouwen.html"
+            class="group bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl hover:border-indigo-400 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="overflow-hidden aspect-video bg-gray-100">
+                <img src="assets/images/webdesigner.jpg" alt="Website laten maken en beheren door Techuis ICT"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+              </div>
+              <div class="p-5">
+                <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">ZZP & Ondernemers</span>
+                <h3 class="text-base font-bold text-gray-900 group-hover:text-indigo-600 transition-colors duration-300 mt-1">
+                  Website Laten Maken
+                </h3>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  Professionele, snelle en mobielvriendelijke websites voor lokale ondernemers, inclusief domein en beheer.
+                </p>
+              </div>
+            </div>
+            <div class="px-5 pb-5 pt-2 flex items-center text-xs font-bold text-indigo-600 gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Meer over websites</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Waarom Kiezen Voor Techuis (Onze Drie Zekerheden) -->
+    <section class="py-12 sm:py-16 bg-slate-50 border-t border-slate-200/80" aria-label="Onze garanties">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          
+          <div class="p-7 rounded-2xl border border-gray-200/90 bg-white flex flex-col items-center text-center shadow-xs hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl mb-4">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">7 Dagen per week support</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Techuis ICT staat 7 dagen per week voor u klaar. Of het nu gaat om snelle computerhulp op afstand of een spoedbezoek aan huis in Zuid-Holland.
+            </p>
+          </div>
+
+          <div class="p-7 rounded-2xl border border-gray-200/90 bg-white flex flex-col items-center text-center shadow-xs hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-4">
+              <ion-icon name="pricetag-outline"></ion-icon>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Heldere & transparante tarieven</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Vooraf duidelijkheid over de kosten zonder verrassingen achteraf. No Cure, No Pay garantie bij de eerste diagnose en altijd inclusief btw.
+            </p>
+          </div>
+
+          <div class="p-7 rounded-2xl border border-gray-200/90 bg-white flex flex-col items-center text-center shadow-xs hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl mb-4">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Geduldig & zonder vakjargon</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Deskundig, betrouwbaar en betrokken. We lossen uw probleem rustig op én leggen het stap-voor-stap uit in gewone mensentaal.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Klantervaringen & Google Reviews (Social Proof) -->
+    <section class="py-14 sm:py-20 bg-white border-t border-slate-200/80" aria-label="Ervaringen van klanten">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200/80 text-amber-900 text-xs sm:text-sm font-semibold mb-3">
+            <span class="flex text-amber-400 gap-0.5" aria-hidden="true">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </span>
+            <span>4.9 / 5 uit 140+ beoordelingen op Google</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">
+            Wat onze klanten in de regio vertellen
+          </h2>
+          <p class="mt-3 text-base sm:text-lg text-gray-600">
+            Echte ervaringen van particulieren, senioren en zelfstandigen in Rijnmond en Drechtsteden.
+          </p>
+        </div>
+
+        <!-- 4 Reviews Grid -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Review 1: Mevr. Van Dijk (Spijkenisse) -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-200/90 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex text-amber-400 text-base" aria-label="5 van de 5 sterren">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+                <span class="text-xs font-semibold text-gray-600 bg-gray-100 px-2 py-0.5 rounded">Google Review</span>
+              </div>
+              <span class="inline-block bg-indigo-50 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-md mb-3">
+                Hulp aan huis • Printer &amp; Wi-Fi
+              </span>
+              <p class="text-sm text-gray-600 leading-relaxed italic">
+                &ldquo;Mijn printer weigerde al weken dienst en de wifi viel steeds weg op zolder. Franklin van Techuis was binnen twee uur bij mij in Spijkenisse. Hij legde alles heel rustig uit zonder moeilijke computertermen. Alles werkt weer perfect!&rdquo;
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center text-sm shadow-xs shrink-0">
+                VD
+              </div>
+              <div>
+                <div class="text-sm font-bold text-gray-900">Mevr. M. van Dijk</div>
+                <div class="text-xs text-gray-600 flex items-center gap-1">
+                  <span>Spijkenisse</span>
+                  <span>•</span>
+                  <span class="text-emerald-600 font-semibold flex items-center gap-0.5">
+                    <ion-icon name="checkmark-circle" class="text-xs"></ion-icon> Geverifieerd
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2: Dhr. De Jong (Rotterdam) -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-200/90 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex text-amber-400 text-base" aria-label="5 van de 5 sterren">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+                <span class="text-xs font-semibold text-gray-600 bg-gray-100 px-2 py-0.5 rounded">Google Review</span>
+              </div>
+              <span class="inline-block bg-indigo-50 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-md mb-3">
+                ZZP • Veilige backup &amp; Outlook
+              </span>
+              <p class="text-sm text-gray-600 leading-relaxed italic">
+                &ldquo;Als zelfstandig adviseur kan ik het me niet veroorloven dat mijn e-mail of laptop hapert. Techuis heeft mijn back-up en Microsoft 365 strak ingericht en beveiligd. Snelle service en een duidelijke factuur zonder verborgen toeslagen.&rdquo;
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm shadow-xs shrink-0">
+                DJ
+              </div>
+              <div>
+                <div class="text-sm font-bold text-gray-900">Dhr. R. de Jong</div>
+                <div class="text-xs text-gray-600 flex items-center gap-1">
+                  <span>Rotterdam</span>
+                  <span>•</span>
+                  <span class="text-emerald-600 font-semibold flex items-center gap-0.5">
+                    <ion-icon name="checkmark-circle" class="text-xs"></ion-icon> Geverifieerd
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3: Familie Bakker (Hoogvliet) -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-200/90 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex text-amber-400 text-base" aria-label="5 van de 5 sterren">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+                <span class="text-xs font-semibold text-gray-600 bg-gray-100 px-2 py-0.5 rounded">Google Review</span>
+              </div>
+              <span class="inline-block bg-indigo-50 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-md mb-3">
+                Spoedhulp • Internetstoring
+              </span>
+              <p class="text-sm text-gray-600 leading-relaxed italic">
+                &ldquo;Op zondagavond viel ons internet plotseling uit terwijl de kinderen moesten leren voor tentamens. Techuis nam direct op en heeft ons op afstand binnen een half uur weer online gekregen. Echte vakmensen met passie voor hun werk!&rdquo;
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center text-sm shadow-xs shrink-0">
+                FB
+              </div>
+              <div>
+                <div class="text-sm font-bold text-gray-900">Familie Bakker</div>
+                <div class="text-xs text-gray-600 flex items-center gap-1">
+                  <span>Hoogvliet</span>
+                  <span>•</span>
+                  <span class="text-emerald-600 font-semibold flex items-center gap-0.5">
+                    <ion-icon name="checkmark-circle" class="text-xs"></ion-icon> Geverifieerd
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 4: Mevr. Koster (Dordrecht) -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-200/90 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex text-amber-400 text-base" aria-label="5 van de 5 sterren">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+                <span class="text-xs font-semibold text-gray-600 bg-gray-100 px-2 py-0.5 rounded">Google Review</span>
+              </div>
+              <span class="inline-block bg-indigo-50 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-md mb-3">
+                Seniorenservice • iPad &amp; DigiD
+              </span>
+              <p class="text-sm text-gray-600 leading-relaxed italic">
+                &ldquo;Ik vond inloggen met DigiD en internetbankieren altijd erg spannend. De monteur heeft met veel geduld alles ingesteld op mijn tablet en duidelijke stappen voor me opgeschreven. Nu kan ik het met een gerust hart zelf doen.&rdquo;
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm shadow-xs shrink-0">
+                EK
+              </div>
+              <div>
+                <div class="text-sm font-bold text-gray-900">Mevr. E. Koster</div>
+                <div class="text-xs text-gray-600 flex items-center gap-1">
+                  <span>Dordrecht</span>
+                  <span>•</span>
+                  <span class="text-emerald-600 font-semibold flex items-center gap-0.5">
+                    <ion-icon name="checkmark-circle" class="text-xs"></ion-icon> Geverifieerd
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Trust summary strip below reviews -->
+        <div class="mt-10 p-4 sm:p-5 rounded-2xl bg-slate-50 border border-gray-200 flex flex-wrap items-center justify-between gap-4 text-center sm:text-left">
+          <div class="flex items-center gap-3 mx-auto sm:mx-0">
+            <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0">
+              <ion-icon name="shield-checkmark-outline"></ion-icon>
+            </div>
+            <div class="text-sm text-gray-700">
+              <span class="font-bold text-gray-900">100% Tevredenheidsgarantie:</span> Geen oplossing bij eerste diagnose? Dan betaalt u niets (No Cure, No Pay).
+            </div>
+          </div>
+          <a href="./contact.html" class="mx-auto sm:mx-0 inline-flex items-center gap-2 text-sm font-bold text-indigo-600 hover:text-indigo-700">
+            <span>Direct een afspraak maken</span>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Section (crisp, geen details/marker, standaard website look) -->
+    <section class="bg-white py-16 sm:py-8">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center">
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+            Veelgestelde vragen
+          </h2>
+          <p class="mt-3 text-base text-gray-600">
+            Antwoorden op veelgestelde vragen over IT support en computerhulp in Zuid-Holland.
+          </p>
+        </div>
+
+        <div class="mt-10 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm" id="faq-accordion">
+
+          <!-- Item -->
+          <div class="border-b border-gray-200">
+            <button type="button"
+              class="faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-200"
+              aria-expanded="false">
+              <span class="text-base sm:text-lg font-semibold text-gray-900">
+                Hoe snel kunnen jullie langskomen of helpen op afstand?
+              </span>
+              <span
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 transition">
+                <svg class="faq-icon h-5 w-5 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-panel hidden px-6 pb-6 pt-0 text-sm sm:text-base leading-relaxed text-gray-700">
+              Vaak dezelfde dag of binnen 24 uur, afhankelijk van locatie en urgentie. Voor spoed is WhatsApp meestal
+              het snelst.
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="border-b border-gray-200">
+            <button type="button"
+              class="faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-200"
+              aria-expanded="false">
+              <span class="text-base sm:text-lg font-semibold text-gray-900">
+                Helpen jullie ook met uitleg (bijvoorbeeld voor ouderen)?
+              </span>
+              <span
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 transition">
+                <svg class="faq-icon h-5 w-5 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-panel hidden px-6 pb-6 pt-0 text-sm sm:text-base leading-relaxed text-gray-700">
+              Ja. Wij nemen de tijd en leggen alles rustig en stap-voor-stap uit, zonder vakjargon.
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="border-b border-gray-200">
+            <button type="button"
+              class="faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-200"
+              aria-expanded="false">
+              <span class="text-base sm:text-lg font-semibold text-gray-900">
+                In welke regio werken jullie?
+              </span>
+              <span
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 transition">
+                <svg class="faq-icon h-5 w-5 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-panel hidden px-6 pb-6 pt-0 text-sm sm:text-base leading-relaxed text-gray-700">
+              Zuid-Holland, waaronder Rotterdam, Spijkenisse, Hoogvliet en omgeving.
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div>
+            <button type="button"
+              class="faq-btn flex w-full items-center justify-between gap-4 px-6 py-5 text-left hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-200"
+              aria-expanded="false">
+              <span class="text-base sm:text-lg font-semibold text-gray-900">
+                Wat kost IT support of computerhulp?
+              </span>
+              <span
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 transition">
+                <svg class="faq-icon h-5 w-5 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-panel hidden px-6 pb-6 pt-0 text-sm sm:text-base leading-relaxed text-gray-700">
+              Wij werken met heldere tarieven zonder verrassingen. Bekijk de tarievenpagina of neem contact op voor een
+              snelle inschatting.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="./tarieven.html"
+            class="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition">
+            Bekijk tarieven
+          </a>
+          <a href="./contact.html"
+            class="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-50 transition">
+            Contact / afspraak
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        const root = document.getElementById('faq-accordion');
+        if (!root) return;
+
+        const items = Array.from(root.querySelectorAll('.faq-btn'));
+
+        // open alleen 1 tegelijk (standaard website gedrag)
+        items.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const panel = btn.parentElement.querySelector('.faq-panel');
+            const icon = btn.querySelector('.faq-icon');
+            const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+            // close all
+            items.forEach((b) => {
+              b.setAttribute('aria-expanded', 'false');
+              b.parentElement.classList.remove('bg-gray-50');
+              const p = b.parentElement.querySelector('.faq-panel');
+              const i = b.querySelector('.faq-icon');
+              if (p) p.classList.add('hidden');
+              if (i) i.classList.remove('rotate-180');
+            });
+
+            // toggle current
+            if (!isOpen) {
+              btn.setAttribute('aria-expanded', 'true');
+              btn.parentElement.classList.add('bg-gray-50');
+              if (panel) panel.classList.remove('hidden');
+              if (icon) icon.classList.add('rotate-180');
+            }
+          });
+        });
+      })();
+    </script>
+
+    <!-- Lokale IT Support Regio's (SEO boost) -->
+    <section class="bg-gray-50 py-14 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-3xl mb-10">
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">
+            IT Support bij u in de regio
+          </h2>
+          <p class="mt-3 text-gray-600">
+            Techuis ICT biedt computerhulp en IT support aan huis en op afstand in meerdere plaatsen in Zuid-Holland.
+            Kies uw regio voor meer informatie.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+
+          <!-- Rotterdam -->
+          <a href="/it-support-rotterdam.html"
+            class="group border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden bg-white">
+            <img src="./assets/images/city-rotterdam.jpg" alt="IT Support Rotterdam"
+              class="aspect-square w-full object-cover group-hover:opacity-80 transition-opacity duration-300 xl:aspect-7/8" loading="lazy">
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">
+                IT Support Rotterdam
+              </h3>
+              <p class="mt-1 text-sm text-gray-700">
+                Computerhulp, WiFi, printer en laptop ondersteuning aan huis of op afstand.
+              </p>
+            </div>
+          </a>
+
+          <!-- Spijkenisse -->
+          <a href="/it-support-spijkenisse.html"
+            class="group border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden bg-white">
+            <img src="./assets/images/city-spijkenisse.jpg" alt="IT Support Spijkenisse"
+              class="aspect-square w-full object-cover group-hover:opacity-80 transition-opacity duration-300 xl:aspect-7/8" loading="lazy">
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">
+                IT Support Spijkenisse
+              </h3>
+              <p class="mt-1 text-sm text-gray-700">
+                Snelle computerhulp voor particulieren en ouderen, bij u thuis.
+              </p>
+            </div>
+          </a>
+
+          <!-- Hoogvliet -->
+          <a href="/it-support-hoogvliet.html"
+            class="group border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden bg-white">
+            <img src="./assets/images/city-hoogvliet.jpg" alt="IT Support Hoogvliet"
+              class="aspect-square w-full object-cover group-hover:opacity-80 transition-opacity duration-300 xl:aspect-7/8" loading="lazy">
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">
+                IT Support Hoogvliet
+              </h3>
+              <p class="mt-1 text-sm text-gray-700">
+                Hulp bij laptop, WiFi en e-mail — duidelijk en zonder stress.
+              </p>
+            </div>
+          </a>
+
+          <!-- Dordrecht -->
+          <a href="/it-support-dordrecht.html"
+            class="group border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden bg-white">
+            <img src="./assets/images/city-dordrecht.jpg" alt="IT Support Dordrecht"
+              class="aspect-square w-full object-cover group-hover:opacity-80 transition-opacity duration-300 xl:aspect-7/8" loading="lazy">
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">
+                IT Support Dordrecht
+              </h3>
+              <p class="mt-1 text-sm text-gray-700">
+                Betrouwbare computerhulp aan huis of via hulp op afstand.
+              </p>
+            </div>
+          </a>
+        </div>
       </div>
 
-      <div class="w-full mx-auto flex my-10">
-        <div class="swiper blog_swiper">
-          <div class="swiper-wrapper" id="blog_swiper"></div>
+    </section>
+    <!-- Lokale IT Problemen (SEO interne links) -->
+    <section class="bg-gray-50 py-14 sm:py-15">
+      <div class="mx-auto max-w-7xl px-6">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+          Veelvoorkomende IT problemen in uw regio
+        </h2>
+        <p class="text-gray-600 mb-8">
+          Direct hulp bij computer- en netwerkproblemen in Zuid-Holland.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-700">
+          <a href="/laptop-traag-rotterdam.html">Laptop traag Rotterdam</a>
+          <a href="/wifi-problemen-rotterdam.html">WiFi problemen Rotterdam</a>
+          <a href="/email-instellen-rotterdam.html">E-mail instellen Rotterdam</a>
+          <a href="/printer-problemen-rotterdam.html">Printer problemen Rotterdam</a>
 
-          <div class="swiper-scrollbar"></div>
-        </div>
-      </div>
-    </main>
+          <a href="/laptop-traag-spijkenisse.html">Laptop traag Spijkenisse</a>
+          <a href="/wifi-problemen-spijkenisse.html">WiFi problemen Spijkenisse</a>
+          <a href="/printer-problemen-spijkenisse.html">Printer problemen Spijkenisse</a>
 
-    <!--todo footer -->
-    <footer class="footer bg-[#212121]">
-      <div
-        class="brands flex flex-col justify-start items-start gap-4 px-6 py-8 md:px-8 md:py-10 lg:px-16 lg:py-12"
-      >
-        <h3 class="text-red-400 font-semibold text-md lg:text-lg">
-          BRAND DIRECTORY
-        </h3>
-        <div class="fashion flex flex-wrap gap-2 mr-4 text-sm lg:text-md">
-          <h4 class="font-semibold text-[darkgray]">FASHION:</h4>
-          <a class="text-gray-500" href="#">T-Shirt |</a>
-          <a class="text-gray-500" href="#">Shirts |</a>
-          <a class="text-gray-500" href="#">Jacket |</a>
-          <a class="text-gray-500" href="#">Dress & Frock |</a>
-          <a class="text-gray-500" href="#">Innerwear |</a>
-          <a class="text-gray-500" href="#">Hosiery</a>
-        </div>
-        <div class="footwear flex flex-wrap gap-2 mr-4 text-sm lg:text-md">
-          <h4 class="font-semibold text-[darkgray]">FOOTWEAR :</h4>
-          <a class="text-gray-500" href="#">Sports |</a>
-          <a class="text-gray-500" href="#">Formal |</a>
-          <a class="text-gray-500" href="#">Boots |</a>
-          <a class="text-gray-500" href="#">Casua |</a>
-          <a class="text-gray-500" href="#">Cowboy Shoes |</a>
-          <a class="text-gray-500" href="#">Party Wear Shoes |</a>
-          <a class="text-gray-500" href="#">Branded |</a>
-          <a class="text-gray-500" href="#">Firstcopy |</a>
-          <a class="text-gray-500" href="#">Long Shoes</a>
-        </div>
-        <div class="jewellery flex flex-wrap gap-2 mr-4 text-sm lg:text-md">
-          <h4 class="font-semibold text-[darkgray]">JEWELLERY :</h4>
-          <a class="text-gray-500" href="#">Necklace |</a>
-          <a class="text-gray-500" href="#">Earrings |</a>
-          <a class="text-gray-500" href="#">Couple Rings |</a>
-          <a class="text-gray-500" href="#">Pendants |</a>
-          <a class="text-gray-500" href="#">Crystal |</a>
-          <a class="text-gray-500" href="#">Bangles |</a>
-          <a class="text-gray-500" href="#">Bracelets |</a>
-          <a class="text-gray-500" href="#">Nosepin |</a>
-          <a class="text-gray-500" href="#">Chain |</a>
-          <a class="text-gray-500" href="#">Earrings |</a>
-          <a class="text-gray-500" href="#">Couple Rings</a>
-        </div>
-        <div class="cosmetics flex flex-wrap gap-2 mr-4 text-sm lg:text-md">
-          <h4 class="font-semibold text-[darkgray]">COSMETICS :</h4>
-          <a class="text-gray-500" href="#">Shampoo |</a>
-          <a class="text-gray-500" href="#">Bodywash |</a>
-          <a class="text-gray-500" href="#">Facewash |</a>
-          <a class="text-gray-500" href="#">Makeup Kit |</a>
-          <a class="text-gray-500" href="#">Liner |</a>
-          <a class="text-gray-500" href="#">Lipstick |</a>
-          <a class="text-gray-500" href="#">Prefume |</a>
-          <a class="text-gray-500" href="#">Body Soap |</a>
-          <a class="text-gray-500" href="#">Scrub |</a>
-          <a class="text-gray-500" href="#">Hair Gel |</a>
-          <a class="text-gray-500" href="#">Hair Colors |</a>
-          <a class="text-gray-500" href="#">Hair Dye |</a>
-          <a class="text-gray-500" href="#">Sunscreen |</a>
-          <a class="text-gray-500" href="#">Skin Loson |</a>
-          <a class="text-gray-500" href="#">Liner |</a>
-          <a class="text-gray-500" href="#">Lipstick</a>
-        </div>
-      </div>
-      <hr />
-      <div class="px-6 py-8 md:px-8 md:py-10 lg:px-16 lg:py-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          <div>
-            <h2 class="font-bold text-md text-white">POPULAR CATEGORIES</h2>
-            <hr class="title w-16 mb-4 mt-2" />
-            <ul class="flex flex-col justify-start text-gray-500 gap-2">
-              <li><a href="#">Fashion</a></li>
-              <li><a href="#">Electronic</a></li>
-              <li><a href="#">Cosmetic</a></li>
-              <li><a href="#">Health</a></li>
-              <li><a href="#">Watches</a></li>
-            </ul>
-          </div>
-          <div>
-            <h2 class="font-bold text-md text-white">PRODUCTS</h2>
-            <hr class="title w-16 mb-4 mt-2" />
-            <ul class="flex flex-col justify-start text-gray-500 gap-2">
-              <li><a href="#">Prices Drop</a></li>
-              <li><a href="#">New Products</a></li>
-              <li><a href="#">Best Sales</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Sitemap</a></li>
-            </ul>
-          </div>
+          <a href="/laptop-traag-hoogvliet.html">Laptop traag Hoogvliet</a>
+          <a href="/wifi-problemen-hoogvliet.html">WiFi problemen Hoogvliet</a>
 
-          <div>
-            <h2 class="font-bold text-md text-white">OUR COMPANY</h2>
-            <hr class="title w-16 mb-4 mt-2" />
-            <ul class="flex flex-col justify-start text-gray-500 gap-2">
-              <li><a href="#">Delivery</a></li>
-              <li><a href="#">Legal Notice</a></li>
-              <li><a href="#">Terms And Conditions</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Secure Payment</a></li>
-            </ul>
-          </div>
-          <div>
-            <h2 class="font-bold text-md text-white">SERVICES</h2>
-            <hr class="title w-16 mb-4 mt-2" />
-            <ul class="flex flex-col justify-start text-gray-500 gap-2">
-              <li><a href="#">Prices Drop</a></li>
-              <li><a href="#">New Products</a></li>
-              <li><a href="#">Best Sales</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Sitemap</a></li>
-            </ul>
-          </div>
-          <div>
-            <h2 class="font-bold text-md text-white">CONTACT</h2>
-            <hr class="title w-16 mb-4 mt-2" />
-            <ul class="flex flex-col justify-start text-gray-500 gap-2">
-              <li>
-                <ion-icon class="text-lg" name="location-outline"></ion-icon>
-                <a href="#"
-                  >419 State 414 Rte Beaver Dams, New York(NY), 14812, USA</a
-                >
-              </li>
-              <li>
-                <ion-icon class="text-lg" name="call-outline"></ion-icon>
-                <a href="#">(607) 936-8058</a>
-              </li>
-              <li>
-                <ion-icon class="text-lg" name="mail-outline"></ion-icon>
-                <a href="#">Example@Gmail.Com</a>
-              </li>
-            </ul>
-          </div>
-          <div class="lg:hidden">
-            <h2 class="font-bold text-md text-white">FOLLOW US</h2>
-            <hr class="title w-16 mb-4 mt-2" />
-            <ul class="flex justify-start text-gray-500 gap-2 text-lg">
-              <li>
-                <a href="#">
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <ion-icon name="logo-github"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <a href="/laptop-traag-dordrecht.html">Laptop traag Dordrecht</a>
+          <a href="/wifi-problemen-dordrecht.html">WiFi problemen Dordrecht</a>
         </div>
       </div>
-      <hr />
-      <div
-        class="mx-auto flex items-center justify-center flex-col gap-4 py-10 pb-20 lg:pb-10"
-      >
-        <img class="w-80" src="./assets/images/payment.png" alt="payment" />
-        <h4 class="text-gray-500 text-md lg:text-lg font-semibold">
-          Copyright © Anon All Rights Reserved.
-        </h4>
+    </section>
+  </main>
+
+  <!-- Footer -->
+    <!-- Footer (Moderne Zakelijke Autoriteits-Footer) -->
+  <footer class="bg-slate-900 text-slate-300 border-t border-slate-800" aria-label="Voettekst">
+    <!-- 4 Gestructureerde Kolommen -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        
+        <!-- Kolom 1: Over Techuis ICT -->
+        <div>
+          <a href="./index.html" class="inline-block mb-4">
+            <span class="text-xl font-bold text-white tracking-tight">Techuis ICT</span>
+            <span class="block text-xs text-indigo-400 font-medium mt-0.5">Deskundig & gewoon bij u thuis</span>
+          </a>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Betrouwbare IT support en computerhulp aan huis in Zuid-Holland en direct op afstand. Zonder moeilijk vakjargon en met rustige uitleg.
+          </p>
+          <div class="space-y-1.5 text-xs text-slate-400">
+            <p><strong class="text-slate-300">Werkgebied:</strong> Zuid-Holland (o.a. Rotterdam, Spijkenisse, Hoogvliet & Dordrecht)</p>
+          </div>
+        </div>
+
+        <!-- Kolom 2: Onze Diensten -->
+        <div>
+          <h3 class="text-sm font-bold text-white tracking-wider uppercase mb-4">Onze Diensten</h3>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><a href="./computer-laptop.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> Computer & Laptop</a></li>
+            <li><a href="./internet-email-thuisnetwerk-wifi.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> WiFi & Thuisnetwerk</a></li>
+            <li><a href="./printer-scanner.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> Printer & Scanner</a></li>
+            <li><a href="./telefoon-mobile-apps.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> Telefoon, Mobiel & Apps</a></li>
+            <li><a href="./tablet-ipad.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> Tablet & Apple iPad</a></li>
+            <li><a href="./hulpopstand.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> Hulp op Afstand</a></li>
+            <li><a href="./huishoudapparaten.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> Smart TV & Huishoudapparaten</a></li>
+            <li><a href="./websitebouwen.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="chevron-forward-outline" class="text-xs text-indigo-400"></ion-icon> Website & Webdesign</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Regio's & Informatie -->
+        <div>
+          <h3 class="text-sm font-bold text-white tracking-wider uppercase mb-4">IT Support per Regio</h3>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><a href="/it-support-rotterdam.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="location-outline" class="text-xs text-indigo-400"></ion-icon> IT Support Rotterdam</a></li>
+            <li><a href="/it-support-spijkenisse.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="location-outline" class="text-xs text-indigo-400"></ion-icon> IT Support Spijkenisse</a></li>
+            <li><a href="/it-support-hoogvliet.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="location-outline" class="text-xs text-indigo-400"></ion-icon> IT Support Hoogvliet</a></li>
+            <li><a href="/it-support-dordrecht.html" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><ion-icon name="location-outline" class="text-xs text-indigo-400"></ion-icon> IT Support Dordrecht</a></li>
+            <li class="pt-2"><a href="./tarieven.html" class="text-indigo-400 hover:underline font-medium">Bekijk onze tarieven →</a></li>
+            <li><a href="./werkwijze.html" class="text-indigo-400 hover:underline font-medium">Hoe wij te werk gaan →</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 4: Direct Contact & Openingstijden -->
+        <div>
+          <h3 class="text-sm font-bold text-white tracking-wider uppercase mb-4">Direct Contact</h3>
+          <ul class="space-y-3 text-sm text-slate-400 mb-5">
+            <li>
+              <a href="tel:+31686427359" data-event="call-click" class="text-white font-semibold hover:text-indigo-400 transition-colors flex items-center gap-2">
+                <ion-icon name="call-outline" class="text-indigo-400 text-base"></ion-icon>
+                <span>06 - 86 42 73 59</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/31686427359?text=Hoi%20Techuis%2C%20ik%20heb%20hulp%20nodig%20met..." data-event="whatsapp-click" class="text-emerald-400 font-semibold hover:text-emerald-300 transition-colors flex items-center gap-2">
+                <ion-icon name="logo-whatsapp" class="text-base"></ion-icon>
+                <span>WhatsApp ons direct</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@techuis.nl" class="hover:text-white transition-colors flex items-center gap-2">
+                <ion-icon name="mail-outline" class="text-indigo-400 text-base"></ion-icon>
+                <span>info@techuis.nl</span>
+              </a>
+            </li>
+            <li class="flex items-start gap-2 text-xs text-slate-400 pt-1">
+              <ion-icon name="time-outline" class="text-indigo-400 text-sm shrink-0 mt-0.5"></ion-icon>
+              <span>Maandag t/m Zaterdag: 08:30 - 20:00 uur (Zondag op afspraak)</span>
+            </li>
+          </ul>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-800 border border-slate-700 text-xs font-semibold text-emerald-400">
+            <ion-icon name="shield-checkmark" class="text-emerald-400 text-sm"></ion-icon>
+            <span>No Cure, No Pay garantie</span>
+          </div>
+        </div>
+
       </div>
-    </footer>
-    <!--! icons -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <!--!javascript file  -->
-    <script type="module" src="./assets/index.js"></script>
-  </body>
+    </div>
+
+    <!-- Onderste Balk: Copyright, Juridisch & Betaalmethoden -->
+    <div class="border-t border-slate-800/80 bg-slate-950 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div>
+          <p>© 2026 Techuis ICT. Alle rechten voorbehouden.</p>
+        </div>
+
+        <div class="flex items-center gap-4 text-slate-400">
+          <a href="/privacybeleid.html" class="hover:text-white transition-colors">Privacybeleid</a>
+          <span>•</span>
+          <a href="/algemenvoorwaarden.html" class="hover:text-white transition-colors">Algemene Voorwaarden</a>
+          <span>•</span>
+          <a href="./overons.html" class="hover:text-white transition-colors">Over ons</a>
+        </div>
+
+        <div class="flex items-center gap-3 text-slate-400">
+          <span class="inline-flex items-center gap-1 font-semibold text-slate-300">
+            <ion-icon name="card-outline" class="text-indigo-400"></ion-icon> PIN aan de deur
+          </span>
+          <span>•</span>
+          <span class="inline-flex items-center gap-1 font-semibold text-slate-300">
+            <ion-icon name="phone-portrait-outline" class="text-emerald-400"></ion-icon> iDEAL / Tikkie
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- javascript -->
+  <script type="module" src="./assets/index.js"></script>
+
+
+    <script>
+      function checkHomePostcode() {
+        var input = document.getElementById('home-postcode-input').value.trim();
+        var fb = document.getElementById('home-postcode-feedback');
+        if (!input) {
+          fb.innerHTML = '⚠️ Vul eerst de 4 cijfers van uw postcode in.';
+          fb.className = 'mt-3 text-xs font-semibold rounded-md p-3 bg-amber-50 text-amber-800 border border-amber-200 block';
+          return;
+        }
+        var val = parseInt(input.substring(0, 4));
+        var place = "Zuid-Holland";
+        if (val >= 3000 && val <= 3089) place = "Rotterdam";
+        else if (val >= 3200 && val <= 3209) place = "Spijkenisse";
+        else if (val >= 3190 && val <= 3199) place = "Hoogvliet";
+        else if (val >= 3300 && val <= 3329) place = "Dordrecht";
+        else if (val >= 2990 && val <= 2999) place = "Barendrecht";
+        else if (val >= 3110 && val <= 3125) place = "Schiedam";
+        else if (val >= 3130 && val <= 3139) place = "Vlaardingen";
+        else if (val >= 2980 && val <= 2989) place = "Ridderkerk";
+        else if (val >= 3220 && val <= 3229) place = "Hellevoetsluis";
+
+        fb.innerHTML = '✅ <strong>Ja! Techuis ICT helpt aan huis in ' + place + '!</strong><br>Franklin komt graag bij u langs. Bel direct of stuur een WhatsApp bericht.';
+        fb.className = 'mt-3 text-xs font-semibold rounded-md p-3 bg-emerald-50 text-emerald-800 border border-emerald-200 block';
+      }
+    </script>
+
+
+  <!-- Mobile Thumb Zone Sticky Action Bar (sm:hidden) -->
+  <aside class="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-gray-200 p-2 sm:hidden shadow-2xl flex gap-2" aria-label="Snelle contactbalk">
+    <a href="https://wa.me/31686427359?text=Hoi%20Techuis%2C%20ik%20heb%20hulp%20nodig%20met..." data-event="whatsapp-click"
+      class="flex-1 bg-green-500 hover:bg-green-600 active:scale-95 text-white py-2.5 px-3 rounded-xl font-semibold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-green-500/20 transition-all">
+      <ion-icon name="logo-whatsapp" class="text-xl"></ion-icon>
+      <span class="text-left leading-tight">
+        <span class="block text-[9px] font-normal opacity-90">Snel antwoord</span>
+        <span class="text-xs font-bold">WhatsApp</span>
+      </span>
+    </a>
+    <a href="tel:+31686427359" data-event="call-click"
+      class="flex-1 bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white py-2.5 px-3 rounded-xl font-semibold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-indigo-500/20 transition-all">
+      <ion-icon name="call-outline" class="text-xl"></ion-icon>
+      <span class="text-left leading-tight">
+        <span class="block text-[9px] font-normal opacity-90">Direct bellen</span>
+        <span class="text-xs font-bold">06 - 86 42 73 59</span>
+      </span>
+    </a>
+  </aside>
+
+
+  <!-- Top 10 UX: Scroll to Top Button (Punt 9) -->
+  <button id="scrollToTopBtn" type="button" aria-label="Terug naar boven"
+    class="opacity-0 pointer-events-none fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-40 bg-white/95 text-gray-800 hover:text-indigo-600 hover:bg-white p-2.5 rounded-full shadow-lg border border-gray-200 transition-all duration-300 active:scale-95 flex items-center justify-center">
+    <ion-icon name="arrow-up-outline" class="text-xl"></ion-icon>
+  </button>
+
+</body>
+
 </html>

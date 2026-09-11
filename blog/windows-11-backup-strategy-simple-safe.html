@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--* favicon -->
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico" type="image/x-icon" />
+  <!--! css link -->
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!--todo tailwind cdn link -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#483285",
+          },
+        },
+      },
+    };
+  </script>
+  <!-- flaticon.com -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+  <title>Windows 11 Backup Strategy Explained (Simple & Safe) | Techuis ICT</title>
+
+  <meta name="description" content="Windows 11 backup strategy: set up reliable backups with built-in tools and avoid data loss."/>
+  <meta name="keywords" content="windows 11 backup, file history, onedrive backup, restore point, external drive backup"/>
+  <link rel="canonical" href="https://techuis.nl/blog/windows-11-backup-strategy-simple-safe.html" />
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="Windows 11 Backup Strategy Explained (Simple & Safe)"/>
+  <meta property="og:description" content="Windows 11 backup strategy: set up reliable backups with built-in tools and avoid data loss."/>
+  <meta property="og:image" content="./assets/images/og/windows11-tips.png"/>
+  <meta property="og:url" content="https://techuis.nl/blog/windows-11-backup-strategy-simple-safe.html"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Windows 11 Backup Strategy Explained (Simple & Safe)"/>
+  <meta name="twitter:description" content="Windows 11 backup strategy: set up reliable backups with built-in tools and avoid data loss."/>
+  <meta name="twitter:image" content="./assets/images/og/windows11-tips.png"/>
+
+  <!-- BlogPosting Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Windows 11 Backup Strategy Explained (Simple & Safe)",
+      "description": "Windows 11 backup strategy: set up reliable backups with built-in tools and avoid data loss.",
+      "url": "./windows-11-backup-strategy-simple-safe.html",
+      "image": "https://techuis.nl/assets/images/logo/og-image.jpg",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Techuis ICT",
+        "url": "https://techuis.nl/"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Techuis ICT"
+      }
+    }
+  </script>
+
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:site_name" content="Techuis ICT" />
+</head>
+
+<body>
+  <header class="header w-full">
+    <!-- Cookies and Cache start -->
+    <!-- Cookie Consent Banner Start -->
+    <!-- ====== Cookies Section Start -->
+    <section id="cookieConsent"
+      class="fixed rounded md:rounded-lg bottom-10 left-1/2 -translate-x-1/2 w-1/2 bg-white z-50 shadow-lg transition-all duration-300"
+      style="display: none;">
+      <div class="max-w-ml mx-auto px-3 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <span class="text-sm text-gray-800 flex-1">
+          Deze website gebruikt cookies voor de beste ervaring.
+          <a href="../privacybeleid.html" class="text-indigo-600 underline hover:text-indigo-800 ml-1">Meer info</a>
+        </span>
+        <div class="flex gap-1 mt-2 sm:mt-0">
+          <button id="acceptCookies"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs px-3 py-1 rounded transition">Accepteren</button>
+          <button id="declineCookies"
+            class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded border transition">Weigeren</button>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Cookies Section End -->
+    <script>
+      // Simple cookie consent logic
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        if (!getCookie("cookieConsent")) {
+          document.getElementById("cookieConsent").style.display = "flex";
+        }
+        document.getElementById("acceptCookies").onclick = function () {
+          setCookie("cookieConsent", "accepted", 365);
+          document.getElementById("cookieConsent").style.display = "none";
+        };
+        document.getElementById("declineCookies").onclick = function () {
+          setCookie("cookieConsent", "declined", 365);
+          document.getElementById("cookieConsent").style.display = "none";
+        };
+      });
+    </script>
+    <!-- Cookie Consent Banner End -->
+    <!-- Cookies and Cache end -->
+    <!--! topHeader -->
+    <!--  -->
+    <div class="top-header w-screen flex flex-col items-center justify-between">
+      <!-- <div class="top-header w-screen flex flex-col items-center justify-between border-b"> -->
+      <div class="flex w-full items-center justify-between p-4 md:px-20 border-b">
+        <div class="icons hidden lg:flex items-center gap-2">
+          <a class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center transition-all"
+            href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center transition-all"
+            href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center transition-all"
+            href="#">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </div>
+        <h3 class="text-gray-400 font-semibold text-xs">
+          <!-- // ICT hulp -->
+          <span class="text-black-400">Bel ons</span> voor een gratis gesprek <span class="text-black-400"> via </span>
+          <a href="tel:+31686427359"><ion-icon name="call-outline"></ion-icon> 0686427359</a>
+          <span> | Wij zijn ook via WhatsApp te bereiken! </span> <a href="https://wa.me/31686427359"><ion-icon
+              name="logo-whatsapp"></ion-icon> 0686427359</a>
+        </h3>
+        <div class="select hidden md:flex">
+          <select class="mr-2 p-1 px-2 text-sm font-semibold" id="language">
+            <option value="Nederlands">Nederlands</option>
+            <option value="Engels">Engels</option>
+            <option value="Portugees">Portugees</option>
+            <option value="Spaans">Spaans</option>
+          </select>
+        </div>
+      </div>
+      <div class="gap-4 flex flex-col sm:flex-row w-full items-center justify-around p-6 md:px-24">
+        <div>
+          <a href="../index.html" class="block">
+            <h1 class="font-semibold text-4xl text-gray-600">Techuis ICT</h1>
+            <h4 class="text-[10px]">Deskundig en efficiënt, gewoon bij u thuis!</h4>
+          </a>
+        </div>
+        <!--todo desktop Navbar -->
+        <div class="desktopNavbar">
+          <nav class="my-4 hidden lg:flex justify-center">
+            <ul class="desktopNavbarUl flex justify-center items-center gap-12 font-sm font-bold text-gray-600">
+                <li class="nav_items relative category_nav_item">
+                  <a href="#Categories">Diensten</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"></span>
+                  <!--? hoverItems -->
+                  <ul
+                    class="categoriesItem hidden absolute top-10 shadow-lg rounded-xl grid-cols-4 p-4 gap-4 border-2 border-double text-gray-400 font-normal bg-white z-10">
+
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Telefoon - Mobiel - APP
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li>
+                          <a href="../telefoon-mobile-apps.html"> Vaste Telefoon </a>
+                        </li>
+                        <li>
+                          <a href="../telefoon-mobile-apps.html"> Mobiel </a>
+                        </li>
+                        <li>
+                          <a href="../telefoon-mobile-apps.html"> App </a>
+                        </li>
+                        <li>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Computer - Laptop
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li>
+                          <a href="../computer-laptop.html"> Computer </a>
+                        </li>
+                        <li>
+                          <a href="../computer-laptop.html"> Laptop </a>
+                        </li>
+                        <li>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Tablet - IPAD
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li>
+                          <a href="../tablet-ipad.html"> Tablet </a>
+                        </li>
+                        <li>
+                          <a href="../tablet-ipad.html"> Apple IPAD </a>
+                        </li>
+                        <!-- <li><img src="../assets/images/mens-banner.jpg" alt="pic" /></li> -->
+                      </ul>
+                    </li>
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Internet - Email
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li>
+                          <a href="../internet-email-thuisnetwerk-wifi.html"> Internet </a>
+
+                        </li>
+                        <li>
+                          <a href="../internet-email-thuisnetwerk-wifi.html"> Email </a>
+                        </li>
+                        <li>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Printer - Scanner
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li>
+                          <a href="../printer-scanner.html"> Printer </a>
+                        </li>
+                        <li>
+                          <a href="../printer-scanner.html"> Scanner </a>
+                        </li>
+                        <li>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Website - Webshop - Webdesign
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li>
+                          <a href="../websitebouwen.html"> Website </a>
+                        </li>
+                        <li>
+                          <a href="../websitebouwen.html"> Webshop </a>
+                        </li>
+                        <li>
+                          <a href="../websitebouwen.html"> Webdesign </a>
+                        </li>
+                        <li>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h3 class="border-b py-2 mb-4 text-gray-900 font-semibold">
+                        Huishoud Apparaten
+                      </h3>
+                      <ul class="flex flex-col items-start justify-start gap-2">
+                        <li>
+                          <a href="../huishoudapparaten.html"> Smart TV </a>
+                        </li>
+                        <li>
+                          <a href="../huishoudapparaten.html"> Smart Wasmachine </a>
+                        </li>
+                        <li>
+                          <a href="../huishoudapparaten.html"> Smart Deurbel </a>
+                        </li>
+                        <li>
+                        </li>
+                      </ul>
+                  </ul>
+                  <!--? hoverItems -->
+                </li>
+                <li class="nav_items relative men_nav_item">
+                  <a href="../tarieven.html">Tarieven</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"></span>
+                  <!--? hoverItems -->
+                </li>
+                <li class="nav_items relative women_nav_item">
+                  <a href="../werkwijze.html">Werkwijze</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"></span>
+                  <!--? hoverItems -->
+                </li>
+                <li class="nav_items relative jewelry_nav_item">
+                  <a href="../contact.html">Contact</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"></span>
+                  <!--? hoverItems -->
+                </li>
+                <li class="nav_items relative perfume_nav_item">
+                  <a href="../overons.html">Over ons</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"></span>
+                  <!--? hoverItems -->
+                </li>
+                <li class="nav_items relative">
+                  <a href="../media.html">Media</a>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"></span>
+                  <!--? hoverItems -->
+                </li>
+              </ul>
+            </nav>
+        </div>
+        <div class="desktopNavbar">
+          <ul class=" flex justify-center items-center gap-12 font-sm font-bold text-gray-600">
+            <li>
+              <a href="tel:+31686427359" data-event="call-click"
+                class="inline-flex items-center gap-1.5 rounded-md bg-indigo-600 shadow-lg shadow-indigo-500/50 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors">
+                <ion-icon name="call-outline"></ion-icon> Maak een afspraak
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--? mobile Navbar start -->
+    <div class="mobileNavbar">
+      <!--? navbar button -->
+      <div
+        style="position: fixed; top: 50%; right: 0; transform: translateY(-50%); margin-bottom: 0; box-shadow: 0 0 0.3rem rgb(194, 179, 179);"
+        class="z-10 bg-white w-16 h-44 lg:hidden flex flex-col justify-around items-center p-4 border rounded-l-xl fixed bottom-8 right-0 text-lg">
+        <button id="openNavbarButton" type="button">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+        <button type="button" class="hover:text-red-400 transition-colors duration-300">
+          <a href="../index.html">
+            <ion-icon name="home-outline"></ion-icon>
+          </a>
+        </button>
+      </div>
+      <!--* overlay -->
+      <div id="overlayNavbar" class="hidden fixed top-0 left-0 w-screen h-screen bg-gray-500/30 z-10"></div>
+
+      <!--! sidebarNavbar -->
+      <div
+        class="fixed top-0 w-80 h-screen bg-white p-4 shadow-lg hidden flex-col justify-start gap-4 text-lg font-semibold overflow-auto z-20"
+        id="sidebarNavbar">
+        <div class="flex justify-between border-b-2 py-4">
+          <h3 class="text-red-400">Menu</h3>
+          <button class="closeButton hover:text-red-500">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </button>
+        </div>
+        <a href="../index.html"
+          class="flex font-bold flex items-center gap-2 mb-2 text-gray-700 hover:text-indigo-600 transition-colors">
+          <ion-icon name="home-outline" class="text-2xl"></ion-icon>
+          Home
+        </a>
+        <!-- Navigator -->
+        <ul id="mobileNavbarUl">
+          <li class="nav_items relative men_nav_item flex items-center gap-2 mb-2 group"
+            style="cursor:pointer;padding:0;">
+            <a href="../tarieven.html"
+              class="flex items-center gap-2 w-full h-full text-gray-700 font-semibold underline-offset-4"
+              style="width:100%;height:100%;">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100">
+                <ion-icon name="pricetags-outline" class="text-sm text-indigo-600"></ion-icon>
+              </span>
+              Tarieven
+            </a>
+          </li>
+          <li class="nav_items relative women_nav_item flex items-center gap-2 mb-2 group"
+            style="cursor:pointer;padding:0;">
+            <a href="../werkwijze.html"
+              class="flex items-center gap-2 w-full h-full text-gray-700 font-semibold underline-offset-4"
+              style="width:100%;height:100%;">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-green-100">
+                <ion-icon name="construct-outline" class="text-lg text-green-600"></ion-icon>
+              </span>
+              Werkwijze
+            </a>
+          </li>
+          <li class="nav_items relative jewelry_nav_item flex items-center gap-2 mb-2 group"
+            style="cursor:pointer;padding:0;">
+            <a href="../contact.html"
+              class="flex items-center gap-2 w-full h-full text-gray-700 font-semibold underline-offset-4"
+              style="width:100%;height:100%;">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100">
+                <ion-icon name="mail-outline" class="text-lg text-yellow-600"></ion-icon>
+              </span>
+              Contact
+            </a>
+          </li>
+          <li class="nav_items relative perfume_nav_item flex items-center gap-2 group"
+            style="cursor:pointer;padding:0;">
+            <a href="../overons.html"
+              class="flex items-center gap-2 w-full h-full text-gray-700 font-semibold underline-offset-4"
+              style="width:100%;height:100%;">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-pink-100">
+                <ion-icon name="people-outline" class="text-lg text-pink-600"></ion-icon>
+              </span>
+              Over ons
+            </a>
+          </li>
+        </ul>
+        <div class="border-b"></div>
+        <!-- Diensten dropdown -->
+        <div class="relative mb-4">
+          <button id="dienstenDropdownBtn"
+            class="w-full flex justify-between items-center pb-3 text-gray-600 font-bold focus:outline-none">
+            <span>
+              <div class="font-bold flex items-center gap-2 mb-2">
+                <span
+                  class="inline-flex items-center justify-center gap-2 text-gray-700 hover:text-indigo-600 transition-colors">
+                  <ion-icon name="apps-outline" class="text-xl"></ion-icon>
+                </span>
+                <h3>Diensten</h3>
+              </div>
+            </span>
+            <svg id="dienstenDropdownIcon" class="w-4 h-4 ml-2 transition-transform duration-200" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="dienstenDropdownMenu" class="hidden flex-col gap-1 mt-2">
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100">
+                <ion-icon name="phone-portrait-outline" class="text-indigo-600 text-lg"></ion-icon>
+              </span>
+              <a href="../telefoon-mobile-apps.html">Telefoon - Mobiel - APP</a>
+            </div>
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100">
+                <ion-icon name="laptop-outline" class="text-blue-600 text-lg"></ion-icon>
+              </span>
+              <a href="../computer-laptop.html">Computer - Laptop</a>
+            </div>
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-pink-100">
+                <ion-icon name="tablet-portrait-outline" class="text-pink-600 text-lg"></ion-icon>
+              </span>
+              <a href="../tablet-ipad.html">Tablet - Apple IPAD</a>
+            </div>
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-green-100">
+                <ion-icon name="wifi-outline" class="text-green-600 text-lg"></ion-icon>
+              </span>
+              <a href="../internet-email-thuisnetwerk-wifi.html">Internet - Email</a>
+            </div>
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100">
+                <ion-icon name="print-outline" class="text-yellow-600 text-lg"></ion-icon>
+              </span>
+              <a href="../printer-scanner.html">Printer - Scanner</a>
+            </div>
+            <div class="mobile_navbar_item pb-3 text-gray-600 flex items-center gap-2">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100">
+                <ion-icon name="globe-outline" class="text-purple-600 text-lg"></ion-icon>
+              </span>
+              <a href="../websitebouwen.html">Webdesign</a>
+            </div>
+          </div>
+        </div>
+        <script>
+          // Dropdown toggle logic
+          document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('dienstenDropdownBtn');
+            const menu = document.getElementById('dienstenDropdownMenu');
+            const icon = document.getElementById('dienstenDropdownIcon');
+            btn.addEventListener('click', function () {
+              menu.classList.toggle('hidden');
+              icon.classList.toggle('rotate-180');
+            });
+          });
+        </script>
+      </div>
+      <!--todo sidebarCategories -->
+      <div id="sidebarCategories"
+        class="fixed top-0 w-80 h-screen bg-white p-6 shadow-lg hidden flex-col justify-start gap-4 font-semibold overflow-auto z-20">
+        <div class="w-full flex items-center justify-between">
+          <button class="closeButton text-xl hover:text-red-500">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--? mobile Navbar end-->
+  </header>
+  <main><section class="bg-white py-12 sm:py-14">
+  <div class="mx-auto max-w-4xl px-6">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="../index.html" class="hover:text-indigo-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="../media.html" class="hover:text-indigo-600">Media</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-700">Windows 11 Backup Strategy Explained (Simple & Safe)</span>
+    </nav>
+
+    <header class="mb-8">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="text-xs px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-100">Backup</span>
+        <span class="text-xs px-3 py-1 rounded-full bg-gray-50 text-gray-700 border">Beginner</span>
+        <span class="text-xs px-3 py-1 rounded-full bg-gray-50 text-gray-700 border inline-flex items-center gap-1">
+          <ion-icon name="calendar-outline"></ion-icon>2025-04-02
+        </span>
+        <span class="text-xs px-3 py-1 rounded-full bg-gray-50 text-gray-700 border inline-flex items-center gap-1">
+          <ion-icon name="time-outline"></ion-icon>9 min
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">Windows 11 Backup Strategy Explained (Simple & Safe)</h1>
+      <p class="text-gray-600 mt-3 text-lg">A simple backup plan using Windows tools plus an external drive and optional cloud sync.</p>
+    </header>
+
+    <article class="prose prose-gray max-w-none">
+      
+<h2 id="goal">The goal</h2>
+<p>Protect against accidental deletion, ransomware, and hardware failure. Focus on <strong>restorable</strong> backups.</p>
+<h2 id="plan">Simple plan</h2>
+<ul>
+  <li><strong>Local:</strong> your device.</li>
+  <li><strong>External:</strong> File History to a USB drive.</li>
+  <li><strong>Optional cloud:</strong> OneDrive for critical documents.</li>
+</ul>
+<h2 id="test">Test restore</h2>
+<p>Pick one folder monthly and restore it—confidence comes from testing.</p>
+
+      <h2 id="techuis-help">Need Techuis help?</h2>
+      <p>Techuis can implement these improvements for you (remote or on-site), and verify the results with a short checklist.</p>
+    </article>
+
+    <div class="mt-10 border-t pt-8">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <a href="../media.html" class="inline-flex items-center gap-2 text-indigo-600 font-semibold hover:underline">
+          <ion-icon name="arrow-back-outline"></ion-icon> Back to all articles
+        </a>
+        <a href="../contact.html" class="inline-flex items-center justify-center rounded-md bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-500 transition">
+          <ion-icon name="call-outline" class="mr-2"></ion-icon>
+          Get help from Techuis
+        </a>
+      </div>
+    </div>
+  </div>
+</section></main>
+  <!-- Footer -->
+  <footer class="footer bg-[#212121]">
+    <div class="brands flex flex-col justify-start items-start gap-4 px-6 py-8 md:px-8 md:py-10 lg:px-16 lg:py-12">
+      <h3 class="text-red-400 font-semibold text-md lg:text-lg">
+        Techuis ICT - Alle Diensten
+      </h3>
+      <div class="fashion flex flex-wrap gap-2 mr-4 text-sm lg:text-md">
+        <h4 class="font-semibold text-[darkgray]">Telefoon - Mobiel - App:</h4>
+        <a class="text-gray-500" href="../telefoon-mobile-apps.html">HuisTelefoon Installeren |</a>
+        <a class="text-gray-500" href="../telefoon-mobile-apps.html">Mobiele Apps installeren |</a>
+        <a class="text-gray-500" href="../telefoon-mobile-apps.html">Apps installeren |</a>
+        <a class="text-gray-500" href="../telefoon-mobile-apps.html">Repareren |</a>
+        <a class="text-gray-500" href="../telefoon-mobile-apps.html">Gegevens Overzetten zoals Foto's of Video's |</a>
+        <a class="text-gray-500" href="../telefoon-mobile-apps.html">Professionele uitleg over het gebruik van uw
+          huistelefoon, mobiel en apps
+          |</a>
+      </div>
+      <div class="footwear flex flex-wrap gap-2 mr-4 text-sm lg:text-md">
+        <h4 class="font-semibold text-[darkgray]">Computer - Laptop:</h4>
+        <a class="text-gray-500" href="../computer-laptop.html">Computer Installeren |</a>
+        <a class="text-gray-500" href="../computer-laptop.html">Laptop Installeren |</a>
+        <a class="text-gray-500" href="../computer-laptop.html">Computer of Laptop virus verwijderen |</a>
+        <a class="text-gray-500" href="../computer-laptop.html">Computer of laptop onderdeel vervangen |</a>
+        <a class="text-gray-500" href="../computer-laptop.html">Computer of laptop Repareren |</a>
+        <a class="text-gray-500" href="../computer-laptop.html">Gegevens Overzetten zoals foto's of Video's |</a>
+        <a class="text-gray-500" href="../computer-laptop.html">Computer randapparaten installeren zoals webcamera's of
+          printers |</a>
+        <a class="text-gray-500" href="../computer-laptop.html">Professionele uitleg over het gebruik van uw Computer ,
+          Laptop</a>
+      </div>
+      <div class="jewellery flex flex-wrap gap-2 mr-4 text-sm lg:text-md">
+        <h4 class="font-semibold text-[darkgray]">Tablet - Apple IPAD :</h4>
+        <a class="text-gray-500" href="../tablet-ipad.html">Tablet installeren |</a>
+        <a class="text-gray-500" href="../tablet-ipad.html">Apple IPAD Installeren |</a>
+        <a class="text-gray-500" href="../tablet-ipad.html">Apps Installeren |</a>
+        <a class="text-gray-500" href="../tablet-ipad.html">Gegevens Overzetten zoals foto's of Video's |</a>
+        <a class="text-gray-500" href="../tablet-ipad.html">>Professionele uitleg over het gebruik van Videobellen |</a>
+      </div>
+      <div class="cosmetics flex flex-wrap gap-2 mr-4 text-sm lg:text-md">
+        <h4 class="font-semibold text-[darkgray]">Internet - Email - Thuisnetwerk - WIFI :</h4>
+        <a class="text-gray-500" href="../internet-email-thuisnetwerk-wifi.html">Internet Installeren | </a>
+        <a class="text-gray-500" href="../internet-email-thuisnetwerk-wifi.html">Email Instellen |</a>
+        <a class="text-gray-500" href="../internet-email-thuisnetwerk-wifi.html">Thuisnetwerk Instellen |</a>
+        <a class="text-gray-500" href="../internet-email-thuisnetwerk-wifi.html">WIFI Instellen |</a>
+        <a class="text-gray-500" href="../internet-email-thuisnetwerk-wifi.html">Email adres Aanmaken |</a>
+        <a class="text-gray-500" href="../internet-email-thuisnetwerk-wifi.html">Email configureren op een apparaat |</a>
+        <a class="text-gray-500" href="../internet-email-thuisnetwerk-wifi.html">Internet (UTP) kabel trekken naar een
+          andere ruimte |</a>
+        <a class="text-gray-500" href="../internet-email-thuisnetwerk-wifi.html">WIFI netwerk verbeteren |</a>
+        <a class="text-gray-500" href="../internet-email-thuisnetwerk-wifi.html">Internet Uitleg |</a>
+        <a class="text-gray-500" href="../internet-email-thuisnetwerk-wifi.html">Professionele uitleg over het gebruik
+          van Email of het Interner |</a>
+      </div>
+      <div class="cosmetics flex flex-wrap gap-2 mr-4 text-sm lg:text-md">
+        <h4 class="font-semibold text-[darkgray]">Printer - Scanner :</h4>
+        <a class="text-gray-500" href="../printer-scanner.html">Printer Installeren | </a>
+        <a class="text-gray-500" href="../printer-scanner.html">Scanner Instellen |</a>
+        <a class="text-gray-500" href="../printer-scanner.html">Professionele uitleg over het gebruik van uw Printer of
+          Scanner |</a>
+      </div>
+      <div class="cosmetics flex flex-wrap gap-2 mr-4 text-sm lg:text-md">
+        <h4 class="font-semibold text-[darkgray]">Website Bouwen - Website beheer :</h4>
+        <a class="text-gray-500" href="../websitebouwen.html">Website bouwen in de wens van de klant | </a>
+        <a class="text-gray-500" href="../websitebouwen.html">Domain Instellen |</a>
+        <a class="text-gray-500" href="../websitebouwen.html">Webhost Instellen |</a>
+        <a class="text-gray-500" href="../websitebouwen.html">Website her inrichten |</a>
+        <a class="text-gray-500" href="../websitebouwen.html">Professionele uitleg over het gebruik van uw Website |</a>
+      </div>
+      <div class="cosmetics flex flex-wrap gap-2 mr-4 text-sm lg:text-md">
+        <h4 class="font-semibold text-[darkgray]">Huishoud Apparaten :</h4>
+        <a class="text-gray-500" href="../huishoudapparaten.html">Installeren van SMART Wasmachine | </a>
+        <a class="text-gray-500" href="../huishoudapparaten.html">Installeren van SMART Koelkast | </a>
+        <a class="text-gray-500" href="../huishoudapparaten.html">Installeren van SMART Televisie |</a>
+        <a class="text-gray-500" href="../huishoudapparaten.html">Installeren van SMART Stofzuiger |</a>
+        <a class="text-gray-500" href="../huishoudapparaten.html">Koppelen van uw SMART Apparaat aan het WIFI |</a>
+        <a class="text-gray-500" href="../huishoudapparaten.html">Professionele uitleg over de werking van uw SMART
+          Apparaat |</a>
+      </div>
+      <div class="cosmetics flex flex-wrap gap-2 mr-4 text-sm lg:text-md">
+        <h4 class="font-semibold text-[darkgray]">Hulp op Afstand :</h4>
+        <a class="text-gray-500" href="../werkwijze.html">Via Teamviewer | </a>
+      </div>
+
+      <!-- Footer: IT Support per regio (SEO) -->
+      <div class="mt-10">
+        <h4 class="font-semibold text-[darkgray] mb-2">
+          IT Support per regio
+        </h4>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <a class="text-gray-500 hover:text-white transition" href="/it-support-rotterdam.html">
+            IT Support Rotterdam |
+          </a>
+          <a class="text-gray-500 hover:text-white transition" href="/it-support-spijkenisse.html">
+            IT Support Spijkenisse |
+          </a>
+          <a class="text-gray-500 hover:text-white transition" href="/it-support-hoogvliet.html">
+            IT Support Hoogvliet |
+          </a>
+          <a class="text-gray-500 hover:text-white transition" href="/it-support-dordrecht.html">
+            IT Support Dordrecht
+          </a>
+        </div>
+        <div class="font-semibold text-[darkgray] mb-2"><a href="/laptop-traag-rotterdam.html">Laptop traag in
+            Rotterdam</a></div>
+      </div>
+
+    </div>
+
+    <hr />
+
+    <div class="px-6 py-8 md:px-8 md:py-10 lg:px-16 lg:py-12">
+      <div class="grid grid-cols-3 content-end gap-4">
+        <div>
+          <h2 class="font-bold text-md text-white">Voorwaarden</h2>
+          <hr class="title w-16 mb-4 mt-2" />
+          <ul class="flex flex-col justify-start text-gray-500 gap-2">
+            <li><a href="/privacybeleid.html">Privacybeleid</a></li>
+            <li><a href="/algemenvoorwaarden.html">Algemene Voorwaarden</a></li>
+            <li><a href="/overons.html">Over ons</a></li>
+          </ul>
+        </div>
+
+        <div class="pb-0 sm:pb-0 contact-footer-section">
+          <h2 class="font-bold text-md text-white">CONTACT</h2>
+          <hr class="title w-16 mb-4 mt-2" />
+          <ul class="flex flex-col justify-start text-gray-500 gap-2">
+            <li><ion-icon class="text-lg" name="call-outline"></ion-icon><a href="tel:+31686427359"> (+31) 686427359</a>
+            </li>
+            <li><ion-icon class="text-lg" name="mail-outline"></ion-icon><a href="mailto:info@techuis.nl">
+                info@techuis.nl</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <!-- Lokale IT Problemen (SEO interne links) -->
+    <div class="fixed bottom-5 right-5 z-[9999] flex items-center gap-2 group">
+    <span class="hidden sm:inline-block bg-white text-gray-800 text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg border border-gray-200 transition-all pointer-events-none group-hover:scale-105">
+      Direct antwoord via WhatsApp
+    </span>
+    <a href="https://wa.me/31686427359?text=Hoi%20Techuis%2C%20ik%20heb%20hulp%20nodig%20met..." target="_blank"
+      class="flex items-center justify-center w-13 h-13 bg-green-500 rounded-full shadow-xl hover:bg-green-600 hover:scale-110 transition-all duration-300 p-3"
+      aria-label="WhatsApp Techuis" data-event="whatsapp-click">
+      <ion-icon name="logo-whatsapp" class="text-white text-2xl"></ion-icon>
+    </a>
+  </div>
+  </footer>
+
+  <!-- icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- javascript -->
+  <script type="module" src="../assets/index.js"></script>
+
+</body>
+
+</html>
+
+<hr />
+<div class="fixed bottom-5 right-5 z-[9999] flex items-center gap-2 group">
+    <span class="hidden sm:inline-block bg-white text-gray-800 text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg border border-gray-200 transition-all pointer-events-none group-hover:scale-105">
+      Direct antwoord via WhatsApp
+    </span>
+    <a href="https://wa.me/31686427359?text=Hoi%20Techuis%2C%20ik%20heb%20hulp%20nodig%20met..." target="_blank"
+      class="flex items-center justify-center w-13 h-13 bg-green-500 rounded-full shadow-xl hover:bg-green-600 hover:scale-110 transition-all duration-300 p-3"
+      aria-label="WhatsApp Techuis" data-event="whatsapp-click">
+      <ion-icon name="logo-whatsapp" class="text-white text-2xl"></ion-icon>
+    </a>
+  </div>
+</footer>
+
+<!-- icons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- javascript -->
+<script type="module" src="../assets/index.js"></script>
+</body>
+
+</html>
+<hr />
+<!-- Lokale IT Problemen (SEO interne links) -->
+<div class="fixed bottom-5 right-5 z-[9999] flex items-center gap-2 group">
+    <span class="hidden sm:inline-block bg-white text-gray-800 text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg border border-gray-200 transition-all pointer-events-none group-hover:scale-105">
+      Direct antwoord via WhatsApp
+    </span>
+    <a href="https://wa.me/31686427359?text=Hoi%20Techuis%2C%20ik%20heb%20hulp%20nodig%20met..." target="_blank"
+      class="flex items-center justify-center w-13 h-13 bg-green-500 rounded-full shadow-xl hover:bg-green-600 hover:scale-110 transition-all duration-300 p-3"
+      aria-label="WhatsApp Techuis" data-event="whatsapp-click">
+      <ion-icon name="logo-whatsapp" class="text-white text-2xl"></ion-icon>
+    </a>
+  </div>
+</footer>
+
+<!-- icons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- javascript -->
+<script type="module" src="../assets/index.js"></script>
+</body>
+
+</html>
+<hr />
+<div class="flex justify-center items-center p-4">
+  <h4 class="text-gray-500 text-md lg:text-lg font-semibold">
+    Copyright © Made with <span class="text-red-500 font-bold mx-1">♥</span> by
+    <a class="text-gray-500 hover:text-white transition-colors duration-300" href="#">Franklin</a>
+  </h4>
+</div>
+
+<div class="fixed bottom-5 right-5 z-[9999] flex items-center gap-2 group">
+    <span class="hidden sm:inline-block bg-white text-gray-800 text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg border border-gray-200 transition-all pointer-events-none group-hover:scale-105">
+      Direct antwoord via WhatsApp
+    </span>
+    <a href="https://wa.me/31686427359?text=Hoi%20Techuis%2C%20ik%20heb%20hulp%20nodig%20met..." target="_blank"
+      class="flex items-center justify-center w-13 h-13 bg-green-500 rounded-full shadow-xl hover:bg-green-600 hover:scale-110 transition-all duration-300 p-3"
+      aria-label="WhatsApp Techuis" data-event="whatsapp-click">
+      <ion-icon name="logo-whatsapp" class="text-white text-2xl"></ion-icon>
+    </a>
+  </div>
+</footer>
+
+<!-- icons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- javascript -->
+<script type="module" src="../assets/index.js"></script>
+</body>
+
+</html>
