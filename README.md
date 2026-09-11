@@ -2,6 +2,11 @@
 
 <div align="center">
 
+  <p align="center">
+    <strong>🇳🇱 Nederlands</strong> •
+    <a href="./README.en.md">🇬🇧 English</a>
+  </p>
+
   <img src="logotechuis.png" alt="Techuis ICT Logo" width="160" height="auto" />
 
   <p align="center">
